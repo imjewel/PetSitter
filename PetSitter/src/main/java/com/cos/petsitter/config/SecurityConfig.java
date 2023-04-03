@@ -1,5 +1,6 @@
 package com.cos.petsitter.config;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -40,7 +41,7 @@ public class SecurityConfig {
 		http
 			.csrf().disable() // csrf 토큰 비활성화 (테스트시 걸어두는 게 좋음)
 			.authorizeRequests()
-				.antMatchers("/auth/**", "/js/**", "/css/**", "/img/**", "/**") // 인증이 없어도 접근할 수 있는 주소
+				.antMatchers("/index", "/auth/**", "/js/**", "/css/**", "/img/**") // 인증이 없어도 접근할 수 있는 주소
 				.permitAll()
 				.anyRequest() // /auth/** 가 아닌 다른 모든 요청은
 				.authenticated() //인증을 받아야 접근 가능
@@ -48,7 +49,7 @@ public class SecurityConfig {
 				.formLogin() // 인증이 필요한 주소를 입력하면
 				.loginPage("/auth/login") //이 로그인 화면으로 인증을 요청하러 이동함
 				.loginProcessingUrl("/auth/loginProc") //loginForm.jsp에 form action을 이 주소로 걸었음
-				.defaultSuccessUrl("/"); // 스프링 시큐리티가 해당 주소로 요청오는 로그인을 가로챈다
+				.defaultSuccessUrl("/index"); // 스프링 시큐리티가 해당 주소로 요청오는 로그인을 가로챈다
 		return http.build();
 	}
 }

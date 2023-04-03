@@ -28,7 +28,6 @@ public class PrincipalDetail implements UserDetails{
 	@Override
 	public String getUsername() {
 		return member.getUsername();
-		//로그인 할 때 email을 사용할 것이기에 getEmail 사용
 	}
 
 	//계정이 만료되지 않았는지 리턴한다. (true: 만료안됨)

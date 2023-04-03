@@ -9,9 +9,9 @@ import com.cos.petsitter.config.auth.PrincipalDetail;
 @Controller
 public class BoardController {
 
-	@GetMapping({"","/index"})
+	@GetMapping("/index")
 	public String index(@AuthenticationPrincipal PrincipalDetail principal) {
-		System.out.println("로그인 사용자 아이디: "+principal.getUsername() );
+		System.out.println("로그인 사용자 아이디: " + principal);
 		return "index";
 	}
 }
