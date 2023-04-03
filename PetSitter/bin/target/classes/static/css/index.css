@@ -1,0 +1,128 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: url('../img/dog.jpg')  no-repeat fixed;
+  background-size:cover;
+}
+.container{
+  width: 520px;
+  margin: 0;
+  padding-bottom: 92px;
+  position: relative;
+  float: right;
+  right: 80px;
+  height: 100%;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+}
+@media screen and (max-width:768px){
+  body{
+    background: none;
+    background-color: #fffec7;
+  }
+  .container{
+    margin: 0 auto;
+    float:none;
+    right: 0;
+  }
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+li{
+  float: left;
+}
+.header{
+  margin: 0;
+  width: 520px;
+  height: 100px;
+  top : 0;
+  background-color: white;
+  position: relative;
+  border-bottom: #333 1px solid;
+  box-shadow:  0 2px 0 2px #acacac;
+}
+.header #logo{
+  position: absolute;
+  top: 20px;
+}
+.header #search-Btn{
+  position: absolute;
+  right: 15px;
+  top: 25px;
+}
+li{
+  list-style: none;
+  float: left;
+}
+.content{
+  width: 520px;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  position: relative;
+  box-shadow:  0 2px 0 2px #acacac;
+}
+
+#right{
+  text-align: right;
+}
+#app_board{
+  width: 520px;
+  text-align: left;
+  border:  solid 1px #000;
+}
+#post{
+  border-top: solid 1px #333;
+  height: 40px;
+  line-height: 40px;
+}
+.footer{
+  width: 520px;
+  padding: 0 0 30px;
+  text-align: center;
+  background-color: white;
+  position: relative;
+  box-shadow:  0 2px 0 2px #acacac;
+}
+.footer p{
+  margin-top: 20px;
+  padding-left: 150px;
+  text-align: left;
+  font-size: 14px;
+}
+.footer h3{
+  font-weight: bold;
+  padding: 10px 0 10px;
+  background-color: #c0c0c0;
+}
+.footer img{
+  position: absolute;
+  left: 20px;
+  top: 80px;
+}
+.menu{
+  position: fixed;
+  bottom: 0;
+  height: 92px;
+  width: 520px;
+  background-color: #fff;
+  box-shadow:  0 2px 0 2px #acacac;
+}
+.menu a{
+  color: #000;
+}
+.menu li{
+  list-style: none;
+  margin-left: 38px;
+  text-align: center;
+}
+/* .moveTopBtn {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  text-align: center;
+} */
