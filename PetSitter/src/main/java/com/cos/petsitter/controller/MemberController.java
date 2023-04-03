@@ -20,12 +20,12 @@ public class MemberController {
 		return "member/signUpForm";
 	}
 	
-	@GetMapping("/auth/myPage")
+	@GetMapping("/myPage")
 	public String myPage() {
 		return "member/myPage";
 	}
 	
-	@GetMapping("/auth/petProfile")
+	@GetMapping("/petProfile")
 	public String petProfile() {
 		return "member/petProfile";
 	}

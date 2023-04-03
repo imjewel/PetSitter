@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix = "sec" uri = "http://www.springframework.org/security/tags" %>
-
 <sec:authorize access="isAuthenticated()">
 	<sec:authentication property="principal" var="principal"/>
 </sec:authorize>
@@ -20,18 +19,18 @@
     <div class="header">
       <a href="basic.html"><img id="logo" src="img/logo1.png"></a>
       <c:choose>
-      	<c:when test="${empty principal}">
-	      <ul>
-		      <li><button onclick="location.href='/auth/login'">로그인</button></li>
-	      </ul>      	
-      	</c:when>
-      	<c:otherwise>
-	      <ul>
-		      <li><button onclick="location.href='logout'">로그아웃</button></li>
-		      <li><button onclick="location.href='myProfile'">회원정보</button></li>
-	      </ul>
-      	</c:otherwise>
-      </c:choose>
+	    <c:when test="${empty principal}">
+	        <ul>
+	            <li><button onclick="location.href='/auth/login'">로그인</button></li>
+	        </ul>          
+	    </c:when>
+	    <c:otherwise>
+	        <ul>
+	            <li><button onclick="location.href='logout'">로그아웃</button></li>
+	            <li><button onclick="location.href='myProfile'">회원정보</button></li>
+	        </ul>
+	    </c:otherwise>
+	</c:choose>
       <input type="image" id="search-Btn" src="img/search.png">
     </div>
     <div class="content">
@@ -56,7 +55,7 @@
         <li><a href=""><img src="img/app_board1.png"><br>게시판</a></li>
         <li><a href=""><img src="img/people1.png"><br>매칭</a></li>
         <li><a href=""><img src="img/shop1.png"><br>쇼핑몰</a></li>
-        <li><a href="/auth/myPage"><img src="img/profile1.png"><br>마이페이지</a></li>
+        <li><a href="/myPage"><img src="img/profile1.png"><br>마이페이지</a></li>
       </ul>
     </div>
   </div>
