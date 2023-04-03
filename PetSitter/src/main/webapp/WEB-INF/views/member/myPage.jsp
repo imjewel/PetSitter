@@ -13,8 +13,8 @@
 		<form>
 		<header>
 		  	<div class="header">
-		      <a href="index"><img id="logo" src="img/logo1.png"></a>
-		      <input type="image" id="search-Btn" src="img/search.png">
+		      <a href="index"><img id="logo" src="/img/logo1.png"></a>
+		      <input type="image" id="search-Btn" src="/img/search.png">
 		  	</div>
 			<div id="head_list"></div>
 			<a href="javascript:history.back()" class="btn btn-primary"><</a>
@@ -52,24 +52,24 @@
 		<section id="bottom_logo">
 		    <div>
 		      <ul>
-		      	<li onclick="location.href='member/index'">
-		      		<img src="img/home1.png"><br>
+		      	<li onclick="location.href='/index'">
+		      		<img src="/img/home1.png"><br>
 		      		홈
 		      	</li>
 		      	<li>
-		      		<img src="img/app_board1.png"><br>
+		      		<img src="/img/app_board1.png"><br>
 		      		게시판
 		      	</li>
 		      	<li>
-		      		<img src="img/people1.png"><br>
+		      		<img src="/img/people1.png"><br>
 		      		매칭
 		      	</li>
 		      	<li>
-		      		<img src="img/shop1.png"><br>
+		      		<img src="/img/shop1.png"><br>
 		      		쇼핑몰
 		      	</li>
-		      	<li onclick="location.href='/member/myProfile'">
-		      		<img src="img/profile1.png"><br>
+		      	<li onclick="location.href='/myProfile'">
+		      		<img src="/img/profile1.png"><br>
 		      		마이페이지
 		      	</li>
 		      </ul>

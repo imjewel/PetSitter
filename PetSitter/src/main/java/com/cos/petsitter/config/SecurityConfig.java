@@ -40,7 +40,7 @@ public class SecurityConfig {
 		http
 			.csrf().disable() // csrf 토큰 비활성화 (테스트시 걸어두는 게 좋음)
 			.authorizeRequests()
-				.antMatchers("/auth/**", "/js/**", "/css/**", "/img/**", "/**") // 인증이 없어도 접근할 수 있는 주소
+				.antMatchers("/index", "/auth/**", "/js/**", "/css/**", "/img/**") // 인증이 없어도 접근할 수 있는 주소
 				.permitAll()
 				.anyRequest() // /auth/** 가 아닌 다른 모든 요청은
 				.authenticated() //인증을 받아야 접근 가능

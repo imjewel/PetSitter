@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix = "sec" uri = "http://www.springframework.org/security/tags" %>
-
+<%@ include file="layout/header.jsp"%>
 <sec:authorize access="isAuthenticated()">
 	<sec:authentication property="principal" var="principal"/>
 </sec:authorize>
@@ -18,7 +18,7 @@
 <body>
   <div class="container"> 
     <div class="header">
-      <a href="basic.html"><img id="logo" src="img/logo1.png"></a>
+      <a href="basic.html"><img id="logo" src="/img/logo1.png"></a>
       <c:choose>
       	<c:when test="${empty principal}">
 	      <ul>
@@ -27,21 +27,53 @@
       	</c:when>
       	<c:otherwise>
 	      <ul>
+	      	  <li><button onclick="location.href='board/saveForm'">글쓰기</button></li>
 		      <li><button onclick="location.href='logout'">로그아웃</button></li>
-		      <li><button onclick="location.href='myProfile'">회원정보</button></li>
+		      <li><button onclick="location.href='updateForm'">회원정보</button></li>
 	      </ul>
       	</c:otherwise>
       </c:choose>
-      <input type="image" id="search-Btn" src="img/search.png">
+      <input type="image" id="search-Btn" src="/img/search.png">
     </div>
-    <div class="content">
-      
-    </div>
+    
+<div class="container">
+	<c:forEach var="board" items="${boards.content}">
+		<div class="card m-2">
+			<div class="card-body">
+				<h4 class="card-title">${board.title}</h4>
+				<a href="/board/${board.id}" class="btn btn-primary">상세보기</a>
+			</div>
+		</div>
+	</c:forEach>
+	<ul class="pagination justify-content-center">
+		<c:choose>
+			<c:when test="${boards.first}">
+				<li class="page-item disabled"><a class="page-link"
+					href="?page=${boards.number-1}">Previous</a></li>
+			</c:when>
+			<c:otherwise>
+				<li class="page-item"><a class="page-link"
+					href="?page=${boards.number-1}">Previous</a></li>
+			</c:otherwise>
+		</c:choose>
+		<c:choose>
+			<c:when test="${boards.last}">
+				<li class="page-item disabled"><a class="page-link"
+					href="?page=${boards.number+1}">Next</a></li>
+			</c:when>
+			<c:otherwise>
+				<li class="page-item"><a class="page-link"
+					href="?page=${boards.number+1}">Next</a></li>
+			</c:otherwise>
+		</c:choose>
+	</ul>
+</div>
+    
     <div class="footer">
       <hr>
       <h3>PetSitter</h3>
       <hr>
-      <img src="img/footerlogo.png">
+      <img src="/img/footerlogo.png">
       <p><a href="">PetSitter 고객센터 바로가기</a></p>
       <p>
         회사 : MyPetSitter<br>
@@ -52,11 +84,11 @@
     </div>
     <div class="menu">
       <ul class="menu_ul">
-        <li><a href="index"><img src="img/home1.png"><br>홈</a></li>
-        <li><a href=""><img src="img/app_board1.png"><br>게시판</a></li>
-        <li><a href=""><img src="img/people1.png"><br>매칭</a></li>
-        <li><a href=""><img src="img/shop1.png"><br>쇼핑몰</a></li>
-        <li><a href="/auth/myPage"><img src="img/profile1.png"><br>마이페이지</a></li>
+        <li><a href="index"><img src="/img/home1.png"><br>홈</a></li>
+        <li><a href=""><img src="/img/app_board1.png"><br>게시판</a></li>
+        <li><a href="board/list"><img src="/img/people1.png"><br>매칭</a></li>
+        <li><a href=""><img src="/img/shop1.png"><br>쇼핑몰</a></li>
+        <li><a href="/myPage"><img src="/img/profile1.png"><br>마이페이지</a></li>
       </ul>
     </div>
   </div>
