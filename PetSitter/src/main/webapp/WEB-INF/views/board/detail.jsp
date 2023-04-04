@@ -9,13 +9,13 @@
 		<button id="btn-delete" class="btn btn-danger">삭제</button>
 		<a href="/board/${board.id}/updateForm" class="btn btn-warning">수정</a>
 	</c:if>
+	<br /> <br />
 	<div>
-		<br /> <br />
-		<div>
-			글 번호 : <span id="id"><i>${board.id} </i></span> 작성자 : <span><i>${board.users.username}
-			</i></span>
-		</div>
-		<br />
+		글 번호 : <span id="id"><i>${board.id} </i></span> 
+		작성자 : <span><i>${board.member.username}</i></span>
+	</div>
+	<br />
+	<div>
 		<h3>${board.title}</h3>
 	</div>
 	<hr />

@@ -19,6 +19,7 @@ public class BoardController {
 	@Autowired
 	public BoardService boardService;
 	
+	//메인페이지 글목록
 	@GetMapping({"", "/"})
 	public String index(Model model,@PageableDefault(size = 3, sort = "id", 
 	direction = Sort.Direction.DESC) Pageable pageable) { 
@@ -27,12 +28,12 @@ public class BoardController {
 	}
 	
 	//글 목록
-//	@GetMapping({"/board/list"})
-//	public String index(Model model,@PageableDefault(size = 3, sort = "id", 
-//	direction = Sort.Direction.DESC) Pageable pageable) { 
-//		model.addAttribute("boards",boardService.글목록(pageable));
-//		return "board/list";
-//	}
+	@GetMapping({"/board/list"})
+	public String list(Model model,@PageableDefault(size = 3, sort = "id", 
+	direction = Sort.Direction.DESC) Pageable pageable) { 
+		model.addAttribute("boards",boardService.글목록(pageable));
+		return "board/list";
+	}
 	
 	//글 수정하기
 	@GetMapping("/board/{id}/updateForm")
@@ -49,7 +50,7 @@ public class BoardController {
 	}
 	
 	//USER권한이 필요
-	@GetMapping({"/board/saveForm"})
+	@GetMapping({"/board/saveForm"}) 
 	public String saveForm() { 
 		return "board/saveForm";
 	}
