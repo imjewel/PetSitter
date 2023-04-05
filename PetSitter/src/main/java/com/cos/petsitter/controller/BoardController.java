@@ -23,7 +23,7 @@ public class BoardController {
 	public BoardService boardService;
 	
 	//메인페이지 글목록
-	@GetMapping({"", "/"})
+	@GetMapping({"", "/", "/index"})
 	public String index(Model model,@PageableDefault(size = 3, sort = "id", 
 	direction = Sort.Direction.DESC) Pageable pageable) { 
 		model.addAttribute("boards",boardService.글목록(pageable));
