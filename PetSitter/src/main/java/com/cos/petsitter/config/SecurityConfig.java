@@ -48,7 +48,7 @@ public class SecurityConfig {
 				.formLogin() // 인증이 필요한 주소를 입력하면
 				.loginPage("/auth/login") //이 로그인 화면으로 인증을 요청하러 이동함
 				.loginProcessingUrl("/auth/loginProc") //loginForm.jsp에 form action을 이 주소로 걸었음
-				.defaultSuccessUrl("/"); // 스프링 시큐리티가 해당 주소로 요청오는 로그인을 가로챈다
+				.defaultSuccessUrl("/index"); // 스프링 시큐리티가 해당 주소로 요청오는 로그인을 가로챈다
 		return http.build();
 	}
 }
