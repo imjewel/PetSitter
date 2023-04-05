@@ -1,0 +1,25 @@
+.carousel {
+	width: 520px;
+	margin: 0 auto;
+}
+
+/* 
+.carousel-item {
+} */
+
+.carousel-item > img {
+	width:200px !important;
+	border-radius: 50%;
+}
+
+.carousel-item .carousel-caption {
+	color: #414141!important;
+	text-shadow: none !important;
+	right: 0 !important;
+	left: 200px !important;
+	width: 280px;
+}
+
+.carousel-control-prev-icon {
+	color:#666;
+}

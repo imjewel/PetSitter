@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+body{
+  background: url('../img/dog.jpg')  no-repeat fixed;
+  background-size:cover;
+}
+.container{
+  width: 520px;
+  margin: 0;
+  padding-bottom: 92px;
+  position: relative;
+  float: right;
+  right: 80px;
+  height: 100%;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+  background-color: white;
+}
+@media screen and (max-width:768px){
+  body{
+    background: none;
+    background-color: #FFF;
+  }
+  .container{
+    margin: 0 auto;
+    float:none;
+    right: 0;
+  }
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+li{
+  list-style: none;
+  float: left;
+}
+header{
+  margin: 0;
+  width: 520px;
+  height: 100px;
+  top : 0;
+  position: relative;
+}
+header #logo{
+  position: absolute;
+  top: 20px;
+}
+header #search-Btn{
+  position: absolute;
+  right: 15px;
+  top: 25px;
+}
+
+/* .content{
+  width: 520px;
+  height: 100%;
+  position: absolute;
+  position: relative;
+} */
+
+footer{
+  width: 520px;
+  padding: 20px 0 40px;
+  display: inline-block;
+  text-align: center;
+}
+footer a{
+  float: right;
+  height: 100px;
+  line-height: 100px;
+  padding-right: 50px;
+}
+footer p{
+  display: block;
+  margin-top: 20px;
+  text-align: left;
+  font-size: 14px;
+  margin: 10px auto;
+}
+.bottom_menu{
+  position: fixed;
+  bottom: 0;
+  height: 92px;
+  width: 520px;
+  background-color: #fff;
+}
+.bottom_menu a{
+  color: #000;
+}
+.bottom_menu li{
+  list-style: none;
+  width: 102px;
+  text-align: center;
+  padding-top: 12px;
+}
+.moveTopBtn {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  text-align: center;
+}
