@@ -32,8 +32,8 @@
 		</section>
 		<section id="myPageList">
 			<ul>
-				<li onclick="location='#'">
-					내 정보 관리
+				<li onclick="location.href='update'">
+					내 정보 수정
 				</li>
 				<li onclick="location='#'">
 					내 활동 보기

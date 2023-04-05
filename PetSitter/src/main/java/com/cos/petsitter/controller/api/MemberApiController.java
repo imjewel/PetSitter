@@ -3,7 +3,11 @@ package com.cos.petsitter.controller.api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,8 +21,8 @@ public class MemberApiController {
 	@Autowired
 	private MemberService memberService;
 	
-//	@Autowired
-//	private AuthenticationManager AuthenticationManager;
+	@Autowired
+	private AuthenticationManager authenticationManager;
 	
     @PostMapping("/auth/joinProc")
     public ResponseDto<Integer> save(@RequestBody Member member) {
@@ -28,6 +32,16 @@ public class MemberApiController {
         
         memberService.create(member);
         return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
+    }
+    
+    @PutMapping("/member")
+    public ResponseDto<Integer> update (@RequestBody Member member) {
+    	memberService.update(member);
+    	
+    	Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(member.getUsername(), member.getPassword())); 
+    	SecurityContextHolder.getContext().setAuthentication(authentication);
+    	
+    	return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
     }
 }
 

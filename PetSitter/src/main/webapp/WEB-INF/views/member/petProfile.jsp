@@ -3,8 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="/css/petProfile.css">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
 <meta charset="UTF-8">
 <title>Login Form</title>
 </head>
@@ -55,12 +56,32 @@
 				<li>
 					<label for="hospital">동물병원</label>
 					<input type="text" name="hospital" placeholder="예) SL동물병원 (하왕십리동)"></input>
-				<li>
-					<b>돌봄시 참고사항</b>
 				</li>
 			</ul>
-		</section>	
+		</section>
+			<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+				<input type="checkbox" class="btn-check" id="Rabies" autocomplete="off">
+				<label class="btn btn-outline-primary" for="Rabies">광견병</label>
+				
+				<input type="checkbox" class="btn-check" id="comprehensive" autocomplete="off">
+				<label class="btn btn-outline-primary" for="comprehensive">종합 백신</label>
+				
+				<input type="checkbox" class="btn-check" id="corona" autocomplete="off">
+				<label class="btn btn-outline-primary" for="corona">코로나 백신</label>
+				
+				<input type="checkbox" class="btn-check" id="kennel" autocomplete="off">
+				<label class="btn btn-outline-primary" for="kennel">켄넬코프</label>
+				
+				<input type="checkbox" class="btn-check" id="heartworm" autocomplete="off">
+				<label class="btn btn-outline-primary" for="heartworm">심장 사상충</label>
+				
+				<input type="checkbox" class="btn-check" id="ectoparasite" autocomplete="off">
+				<label class="btn btn-outline-primary" for="ectoparasite">외부 기생충</label>
+			</div>
+		<section id="etc">
+			<b style="padding-left:30px;">돌봄시 참고사항</b>	
 			<textarea rows="10" cols="100"></textarea>
+		</section>
 		<section id="bottom_logo">
 		    <div>
 		      <ul>

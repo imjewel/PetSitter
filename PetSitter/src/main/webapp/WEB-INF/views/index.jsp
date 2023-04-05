@@ -27,7 +27,7 @@
 	    <c:otherwise>
 	        <ul>
 	            <li><button onclick="location.href='logout'">로그아웃</button></li>
-	            <li><button onclick="location.href='myProfile'">회원정보</button></li>
+	            <li><button onclick="location.href='update'">회원정보</button></li>
 	        </ul>
 	    </c:otherwise>
 	</c:choose>
@@ -51,7 +51,7 @@
     </div>
     <div class="menu">
       <ul class="menu_ul">
-        <li><a href="index"><img src="img/home1.png"><br>홈</a></li>
+        <li><a href="/index"><img src="img/home1.png"><br>홈</a></li>
         <li><a href=""><img src="img/app_board1.png"><br>게시판</a></li>
         <li><a href=""><img src="img/people1.png"><br>매칭</a></li>
         <li><a href=""><img src="img/shop1.png"><br>쇼핑몰</a></li>

@@ -20,6 +20,11 @@ public class MemberController {
 		return "member/signUpForm";
 	}
 	
+	@GetMapping("/update")
+	public String update() {
+		return "member/updateForm";
+	}
+	
 	@GetMapping("/myPage")
 	public String myPage() {
 		return "member/myPage";
