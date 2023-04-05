@@ -19,6 +19,7 @@
 <body>
   <div class="container"> 
     <div class="header">
+
       <a href="basic.html"><img id="logo" src="/img/logo1.png"></a>
       <input type="image" id="search-Btn" src="img/search.png">
 		<c:choose>
@@ -35,7 +36,10 @@
 	      </ul>
       	</c:otherwise>
       </c:choose>
-      <input type="image" id="search-Btn" src="/img/search.png">
+   
+    </div>
+    <div class="content">
+      
     </div>
     
 	<div class="container">
@@ -93,6 +97,7 @@
         <li><a href="/board/list"><img src="/img/people1.png"><br>매칭</a></li>
         <li><a href=""><img src="/img/shop1.png"><br>쇼핑몰</a></li>
         <li><a href="/myPage"><img src="/img/profile1.png"><br>마이페이지</a></li>
+
       </ul>
     </div>
   </div>
