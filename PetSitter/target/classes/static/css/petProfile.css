@@ -49,14 +49,15 @@ b {
 .container {
   background-color: #fff;
   border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-      0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+    0 10px 10px rgba(0,0,0,0.22);
   position: relative;
   width: 520px;
   height: 1600px;
   max-width: 100%;
   max-height: 100%;
   overflow: hidden;
+  padding: 0px;
 }
 
 #head_list {
@@ -69,10 +70,10 @@ b {
 }
 
 #pageList li {
-	height: 88px;
+	line-height:50px;
+	/*height: 88px;*/
 	text-align: left;
 	padding-left: 30px;
-	line-height: 100px;
 }
 
 #pageList li:first-child {
@@ -81,13 +82,25 @@ b {
 
 #pageList ul li label {
 	display: inline-block;
-	width: 100px;
+	width: 150px;
 }
 
 input {
 	border: none;
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 10px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin:20px;
+}
+
+#etc {
+	width:300px;	
 }
 
 textarea {

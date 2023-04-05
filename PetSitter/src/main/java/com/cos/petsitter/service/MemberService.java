@@ -31,6 +31,18 @@ public class MemberService {
 			return -1;
 		}
 	}
+	
+	@Transactional
+	public void update (Member member) {
+		Member persistance = memberRepository.findById(member.getId()).orElseThrow(()->{
+			return new IllegalArgumentException("회원 찾기 실패");
+		});
+		String rawPassword = member.getPassword();
+		String encPassword = encoder.encode(rawPassword);
+		persistance.setPassword(encPassword);
+		persistance.setNickname(member.getNickname());
+		
+	}
 }
 
 /**

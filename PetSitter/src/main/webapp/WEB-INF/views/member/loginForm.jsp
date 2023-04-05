@@ -15,6 +15,7 @@
   <div id="bg_container">
       <h1>Sign in</h1>
       <form action="/auth/loginProc" method="post">
+
 	      <input type="text" id="username" name="username" placeholder="ID" />
 	      <input type="password" id="username" name="password" placeholder="Password" />
 	      <a href="#">비밀번호를 잊어버리셨나요?</a>
@@ -26,6 +27,7 @@
 	 	  <a href="#"><img src="/img/kakao.png"></a>
 	 	</div>
 	 	  <button>Sign In</button>
+
  	  </form>
       <button onclick="location.href='/auth/signUp'">Sign Up</button>
   </div>
@@ -34,5 +36,6 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="/js/member.js"></script>
+<%@ include file="../layout/footer.jsp" %>
 </body>
 </html>
