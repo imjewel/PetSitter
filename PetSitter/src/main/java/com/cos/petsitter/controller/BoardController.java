@@ -22,6 +22,7 @@ public class BoardController {
 	@Autowired
 	public BoardService boardService;
 	
+	//커밋용
 	//메인페이지 글목록
 	@GetMapping({"", "/", "/index"})
 	public String index(Model model,@PageableDefault(size = 3, sort = "id", 
