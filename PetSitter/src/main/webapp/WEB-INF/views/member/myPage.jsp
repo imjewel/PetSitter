@@ -54,6 +54,7 @@
 		      <ul>
 		      	<li onclick="location.href='/index'">
 		      	<img src="/img/home1.png"><br>
+
 		      		홈
 		      	</li>
 		      	<li>

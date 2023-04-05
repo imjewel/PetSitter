@@ -18,7 +18,6 @@ import com.cos.petsitter.service.BoardService;
 @Controller
 public class BoardController {
 
-
 	@Autowired
 	public BoardService boardService;
 	
@@ -27,8 +26,6 @@ public class BoardController {
 	public String index(Model model,@PageableDefault(size = 3, sort = "id", 
 	direction = Sort.Direction.DESC) Pageable pageable) { 
 		model.addAttribute("boards",boardService.글목록(pageable));
-		return "index";
-	}
 	
 	//글 목록
 	@GetMapping({"/board/list"})
