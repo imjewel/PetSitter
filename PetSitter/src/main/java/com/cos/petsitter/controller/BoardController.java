@@ -21,12 +21,14 @@ public class BoardController {
 	@Autowired
 	public BoardService boardService;
 	
-	//커밋용
+	//리턴 추가
 	//메인페이지 글목록
 	@GetMapping({"", "/", "/index"})
 	public String index(Model model,@PageableDefault(size = 3, sort = "id", 
 	direction = Sort.Direction.DESC) Pageable pageable) { 
 		model.addAttribute("boards",boardService.글목록(pageable));
+		return "index";
+	}
 	
 	//글 목록
 	@GetMapping({"/board/list"})
