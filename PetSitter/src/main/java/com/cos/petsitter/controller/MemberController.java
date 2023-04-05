@@ -19,13 +19,18 @@ public class MemberController {
 	public String signUp() {
 		return "member/signUpForm";
 	}
-	
-	@GetMapping("/auth/myPage")
+
+	@GetMapping("/update")
+	public String update() {
+		return "member/updateForm";
+	}
+
+	@GetMapping("/myPage")
 	public String myPage() {
 		return "member/myPage";
 	}
 	
-	@GetMapping("/auth/petProfile")
+	@GetMapping("/petProfile")
 	public String petProfile() {
 		return "member/petProfile";
 	}
