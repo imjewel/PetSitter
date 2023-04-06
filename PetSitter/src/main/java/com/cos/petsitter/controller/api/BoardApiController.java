@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cos.petsitter.config.auth.PrincipalDetail;
 import com.cos.petsitter.dto.ResponseDto;
-import com.cos.petsitter.model.Boards;
+import com.cos.petsitter.model.Board;
+import com.cos.petsitter.model.Reply;
 import com.cos.petsitter.service.BoardService;
 
 @RestController
@@ -21,7 +22,7 @@ public class BoardApiController {
 	public BoardService boardService;
 	
 	@PostMapping("/api/board")
-	public ResponseDto<Integer> save(@RequestBody Boards board, @AuthenticationPrincipal PrincipalDetail principal ) {
+	public ResponseDto<Integer> save(@RequestBody Board board, @AuthenticationPrincipal PrincipalDetail principal ) {
 		boardService.글쓰기(board,principal.getMember());
 		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
 	}
@@ -33,10 +34,23 @@ public class BoardApiController {
 	}
 	
 	@PutMapping("/api/board/{id}")
-	public ResponseDto<Integer> update(@PathVariable int id,@RequestBody Boards board){
+	public ResponseDto<Integer> update(@PathVariable int id,@RequestBody Board board){
 		System.out.println("BoardApiController:update id"+id);
 		System.out.println("BoardApiController:update title"+board.getTitle());
 		boardService.글수정하기(id,board);
+		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
+	}
+	
+	@PostMapping("/api/board/{boardId}/reply")
+	public ResponseDto<Integer> replySave(@PathVariable int boardId, @RequestBody Reply reply, @AuthenticationPrincipal PrincipalDetail principal ) {
+		
+		boardService.댓글쓰기(principal.getMember(), boardId, reply);
+		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
+	}
+	
+	@DeleteMapping("/api/board/{boardId}/reply/{replyId}")
+	public ResponseDto<Integer> replyDelete(@PathVariable int replyId){
+		boardService.댓글삭제(replyId);
 		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
 	}
 }

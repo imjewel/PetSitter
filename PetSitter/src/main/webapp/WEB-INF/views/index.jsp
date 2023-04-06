@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%> 
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%> 
  <head>
    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Board.css">
    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
@@ -7,7 +6,7 @@
    <link href="/css/index.css" rel="stylesheet">
  </head> 
  <%@ include file="header.jsp" %>   
-<main>
+	<main>
    	<article class="main_banner">
    		<img class="banner_img" src="img/dogcat.png">
    		<div class="info"><h2>빠르고 간편하게 <br>펫시터를 찾으세요!</h2><br>

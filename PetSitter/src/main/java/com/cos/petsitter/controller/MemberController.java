@@ -12,7 +12,7 @@ public class MemberController {
 	
 	@GetMapping("/auth/login")
 	public String login() {
-		return "member/loginForm";
+	return "member/loginForm";
 	}
 	
 	@GetMapping("/auth/signUp")
@@ -29,11 +29,5 @@ public class MemberController {
 	public String myPage() {
 		return "member/myPage";
 	}
-	
-	@GetMapping("/petProfile")
-	public String petProfile() {
-		return "member/petProfile";
-	}
-	
 	
 }

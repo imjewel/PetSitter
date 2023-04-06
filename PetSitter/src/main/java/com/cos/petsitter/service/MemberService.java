@@ -14,10 +14,10 @@ public class MemberService {
 
 	@Autowired
 	private MemberRepository memberRepository;
-	
+
 	@Autowired
 	private BCryptPasswordEncoder encoder;
-	
+
 	@Transactional
 	public int create (Member member) {
 		String rawPassword = member.getPassword(); // 입력하는 패스워드
@@ -41,7 +41,6 @@ public class MemberService {
 		String encPassword = encoder.encode(rawPassword);
 		persistance.setPassword(encPassword);
 		persistance.setNickname(member.getNickname());
-		
 	}
 }
 
