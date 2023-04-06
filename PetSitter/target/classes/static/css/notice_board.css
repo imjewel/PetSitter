@@ -1,0 +1,95 @@
+
+.content h2{
+  text-align: center;
+  padding: 35px 0 35px;
+  float: left;
+  width: 50%;
+}
+
+.content li{
+  margin-left: 18px;
+  font-size: 20px;
+  display: block;
+}
+
+.postcategory{
+  width: 520px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  padding-left: 47px;
+}
+.postcategory li{
+  text-align: center;
+  font-size: 17px;
+}
+.integrated_borad{
+  border-bottom: #dc882d 3px solid;
+}
+.postcategory a:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px #dc882d;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+
+.postcategory a:hover:after { 
+  transform: scaleX(1); 
+}
+.all_post{
+  margin-top: 50px;
+}
+.post{
+  height: 50px;
+  line-height: 50px;
+  padding-left: 15px;
+  font-size: 18px;
+}
+.post :hover{
+  font-size: 20px;
+  font-weight: bold;
+  transition: font-size 0.3s ease;
+}
+
+.grey{
+  background-color: #dbdbdb;
+}
+/*더보기 버튼*/
+
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+a.button {
+  display: block;
+  position: relative;
+  float: right;
+  width: 480px;
+  padding: 0;
+  margin: 30px 20px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  color: #FFF;
+  border-radius: 5px;
+  transition: all 0.2s ;
+  text-decoration: none;
+}
+#plus{
+  width: 480px;
+}
+#write{
+  width: 100px;
+  margin: 0 20px;
+}
+.btnOrange {
+  background: #FFAA40;
+}
+
+.btnFade.btnOrange:hover {
+  background: #FF8E00;
+  color: #ffffff;
+  text-decoration: none;
+}

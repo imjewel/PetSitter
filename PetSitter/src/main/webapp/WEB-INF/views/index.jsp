@@ -1,105 +1,82 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix = "sec" uri = "http://www.springframework.org/security/tags" %>
-
-<sec:authorize access="isAuthenticated()">
-	<sec:authentication property="principal" var="principal"/>
-</sec:authorize>
-
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PetSitter</title>
-  <link href="/css/index.css" rel="stylesheet">
-</head>
-<body>
-  <div class="container"> 
-    <div class="header">
-
-      <a href="basic.html"><img id="logo" src="/img/logo1.png"></a>
-      <input type="image" id="search-Btn" src="img/search.png">
-		<c:choose>
-      	<c:when test="${empty principal}">
-	      <ul>
-		      <li><button onclick="location.href='/auth/login'">로그인</button></li>
-	      </ul>      	
-      	</c:when>
-      	<c:otherwise>
-	      <ul>
-	      	  <li><button onclick="location.href='board/saveForm'">글쓰기</button></li>
-		      <li><button onclick="location.href='logout'">로그아웃</button></li>
-		      <li><button onclick="location.href='update'">회원정보</button></li>
+    pageEncoding="UTF-8"%> 
+ <head>
+   <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Board.css">
+   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+   <!-- <link href="/css/hover_set.css" rel="stylesheet"> -->
+   <link href="/css/index.css" rel="stylesheet">
+ </head> 
+ <%@ include file="header.jsp" %>   
+<main>
+   	<article class="main_banner">
+   		<img class="banner_img" src="img/dogcat.png">
+   		<div class="info"><h2>빠르고 간편하게 <br>펫시터를 찾으세요!</h2><br>
+   		  <span>우리아이에게 외로운 시간대신<br>행복한 시간을 선사하세요.</span></div>
+   		<div class="sitter">원하는 날을 골라 반려동물을<br>돌보며 수입을 벌어보세요.</div>
+   		<a href="" class="sitter_button">MyPetsi 펫시터<br>등록하기</a>
+   	</article>
+	<article class="matching_result">
+		<h3 class="title">new 매칭!</h3>
+		<a href="#"><p class="more">&raquo;</p></a>
+		<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+		  <div class="carousel-inner">
+		    <div class="carousel-item active">
+	      		<img src="/img/profile1.jpg" class="d-block w-100" >
+	      		<div class="carousel-caption d-md-block">
+			        <h5><b>ID: 펫시터 아이디</b></h5>
+			        <p><b>지역: <br>날짜: </b></p>
+	      		</div>
+	    	</div>
+	    	<div class="carousel-item">
+		      <img src="/img/profile2.jpg" class="d-block w-100">
+		      <div class="carousel-caption d-md-block">
+			      <h5><b>ID: 펫시터 아이디</b></h5>
+			      <p><b>지역: <br>날짜: </b></p>
+	      	  </div>
+	    	</div>
+	    	<div class="carousel-item">
+		      <img src="/img/profile3.jpg" class="d-block w-100">
+		      <div class="carousel-caption d-md-block">
+		      	<h5><b>ID: 펫시터 아이디</b></h5>
+		        <p><b>지역: <br>날짜: </b></p>
+	          </div>
+	        </div>
+	      </div>
+		  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+		    <span class="carousel-control-prev" aria-hidden="true">&lsaquo;</span>
+		    <span class="visually-hidden">Previous</span>
+		  </button>
+		  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+		    <span class="carousel-control-next" aria-hidden="true">&rsaquo;</span>
+		    <span class="visually-hidden">Next</span>
+		  </button>
+		</div>
+	</article>
+	<article id="board">
+		<div class="matching_result">
+			<h3 class="title"><a href="notice_borad.jsp">게시판으로 이동</a></h3>
+			<a href="notice_borad.jsp"><p class="more">&raquo;</p></a>
+		</div>
+		<ul class="width">
+			<li>
+				<div class="subject">펫시터를 찾아요</div>
+				<div class="writer">펫시터 아이디</div>
+				<div class="clear"></div>
+				<div class="date">2023.03.03</div>
+			</li>
+			<a href="" title="Button fade orange" id="plus" class="button btnFade btnOrange">더보기</a>
+	    </ul>
+	  </article>
+	  <article id="board">
+		  <div class="matching_result">
+			<h3 class="title"><a href="">공지사항으로 이동</a></h3>
+			<a href="#"><p class="more">&raquo;</p></a>
+		  </div>
+		  <ul>
+			<li>
+				<div class="subject">공지사항 내용</div>
+			</li>
 	      </ul>
-      	</c:otherwise>
-      </c:choose>
-   
-    </div>
-    <div class="content">
-      
-    </div>
-    
-	<div class="container">
-		<c:forEach var="board" items="${boards.content}">
-			<div class="card m-2">
-				<div class="card-body">
-					<h4 class="card-title">${board.title}</h4>
-					<a href="/board/${board.id}" class="btn btn-primary">상세보기</a>
-				</div>
-			</div>
-		</c:forEach>
-		<ul class="pagination justify-content-center">
-			<c:choose>
-				<c:when test="${boards.first}">	
-					<li class="page-item disabled"><a class="page-link"
-						href="?page=${boards.number-1}">Previous</a></li> <!-- 첫번째 페이지일 경우 : 버튼 비활성화 -->
-				</c:when>
-				<c:otherwise>
-					<li class="page-item"><a class="page-link"
-						href="?page=${boards.number-1}">Previous</a></li>
-				</c:otherwise>
-			</c:choose>
-			<c:choose>
-				<c:when test="${boards.last}">
-					<li class="page-item disabled"><a class="page-link"
-						href="?page=${boards.number+1}">Next</a></li>
-				</c:when>
-				<c:otherwise>
-					<li class="page-item"><a class="page-link"
-						href="?page=${boards.number+1}">Next</a></li>
-				</c:otherwise>
-			</c:choose>
-		</ul>
-	</div>
-    
-    <!-- 
-    <div class="footer">
-      <hr>
-      <h3>PetSitter</h3>
-      <hr>
-      <img src="/img/footerlogo.png">
-      <p><a href="">PetSitter 고객센터 바로가기</a></p>
-      <p>
-        회사 : MyPetSitter<br>
-        도로명주소 : xx시 xx구 xx동 xx번길<br>
-        상담원 업무시간<span id="grey">(토,일,공휴일 휴무)</span><br>
-        이메일 문의 dog_cat@myPetSitter.com
-      </p>
-    </div>
-     -->
-    <div class="menu">
-      <ul class="menu_ul">
-        <li><a href="/index"><img src="/img/home1.png"><br>홈</a></li>
-        <li><a href=""><img src="/img/app_board1.png"><br>게시판</a></li>
-        <li><a href="/board/list"><img src="/img/people1.png"><br>매칭</a></li>
-        <li><a href=""><img src="/img/shop1.png"><br>쇼핑몰</a></li>
-        <li><a href="/myPage"><img src="/img/profile1.png"><br>마이페이지</a></li>
-
-      </ul>
-    </div>
-  </div>
-</body>
-</html>
+	 </article>
+   </main>
+<%@ include file="footer.jsp" %>

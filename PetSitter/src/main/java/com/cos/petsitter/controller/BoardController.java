@@ -31,7 +31,7 @@ public class BoardController {
 	}
 	
 	//글 목록
-	@GetMapping({"/board/list"})
+	@GetMapping({"/auth/board/list"})
 	public String list(Model model,@PageableDefault(size = 3, sort = "id", 
 	direction = Sort.Direction.DESC) Pageable pageable) { 
 		model.addAttribute("boards",boardService.글목록(pageable));
@@ -39,24 +39,38 @@ public class BoardController {
 	}
 	
 	//글 수정하기
-	@GetMapping("/board/{id}/updateForm")
+	@GetMapping("/auth/board/{id}/updateForm")
 	public String updateForm(@PathVariable int id, Model model) {
 		model.addAttribute("board",boardService.글상세보기(id));
 		return "board/updateForm";
 	}
 	
 	//글 상세보기
-	@GetMapping("/board/{id}")
+	@GetMapping("/auth/board/{id}")
 	public String findById(@PathVariable int id, Model model) {
 		model.addAttribute("board",boardService.글상세보기(id));
 		return "board/detail";
 	}
 	
 	//USER권한이 필요
-	@GetMapping({"/board/saveForm"}) 
+	@GetMapping({"/auth/board/saveForm"}) 
 	public String saveForm() { 
 		return "board/saveForm";
 	}
 	
-
+	//notice
+		@GetMapping({"/auth/notice"}) 
+		public String notice() { 
+			return "/notice_board";
+		}
+	//shopping
+		@GetMapping({"/shopping"}) 
+		public String shopping() { 
+			return "/shopping";
+		}
+	//shopping
+		@GetMapping({"/matching"}) 
+		public String matching() { 
+			return "/matching";
+		}
 }
