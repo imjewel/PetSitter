@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<head>
-	<link href="css/shopping.css" rel="stylesheet">
-</head>
 <%@ include file="header.jsp" %>
-    <div class="content">
+<head>
+	<link href="/css/shopping.css" rel="stylesheet">
+</head>
+    <main>
       <h2 id="title">✨MY PETTSI의 추천 애견용품샵</h2>
       <div id="shop">
         <iframe class="shoppingmall" src="https://www.biteme.co.kr/shop/main"></iframe><br>
@@ -26,5 +26,5 @@
         <iframe class="shoppingmall" src="https://arrr.kr/"></iframe><br>
         <a href="https://arrr.kr/" class="button btnFade btnOrange">아르르로 바로가기</a> 
       </div> 
-    </div>
+    </main>
 <%@ include file="footer.jsp" %>

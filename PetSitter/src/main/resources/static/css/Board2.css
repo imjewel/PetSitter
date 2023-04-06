@@ -3,10 +3,6 @@
 	margin: 0 auto;
 }
 
-/* 
-.carousel-item {
-} */
-
 .carousel-item > img {
 	width:200px !important;
 	border-radius: 50%;

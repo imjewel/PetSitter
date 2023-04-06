@@ -1,9 +1,3 @@
-* {
-	margin:0 auto;
-}
-main{
-	width:520px;
-}
 .title {
 	display: inline-block;
 	width: 480px;
@@ -43,12 +37,14 @@ main{
 
 .carousel-control-prev {
 	color: #242424 !important;
-    font-size: 50px; 
+    font-size: 50px;
+    margin-left:5px;
 }
 
 .carousel-control-next {
 	color: #242424 !important;	
-    font-size: 50px; 
+    font-size: 50px;
+    margin-right:5px; 
 }
 
 /* 게시판 본문 */
@@ -57,13 +53,13 @@ main{
   width: 520px;
   float: left;
   color: #292929;
-  padding-top: 50px;
   background-color: white; 
+  
 }
 #board .title {
   float: left;
   width: 350px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 #board #write {
 	float: right;
@@ -96,9 +92,6 @@ main{
   margin-left: 15px;
   padding-top:10px;
   color: #666;
-}
-#board {
-  padding-bottom: 10px;
 }
 
 /*더보기 버튼*/
@@ -133,7 +126,6 @@ a.button {
   color: #ffffff;
   text-decoration: none;
 }
-
 
 /*추가*/
 .title{
@@ -176,7 +168,7 @@ a.button {
 
 .underline{
 	width: 520px;
-	height: 150px;
+	height: 100px;
 }
 .underline a:after {/*after 가상요소*/
    display:block;/*a요소를 블록 요소라고 선언*/
