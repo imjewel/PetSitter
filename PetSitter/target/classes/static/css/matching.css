@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @charset "UTF-8";
 .matching_home{
 	width:280px;
@@ -49,3 +50,56 @@
 	position:absolute;
 	top: 25px;
 }
+=======
+@charset "UTF-8";
+.matching_home{
+	width:280px;
+}
+.home_title{
+	color:#333;
+	text-align:center;
+	margin-bottom:40px;
+}
+.home_info{
+	display: inline-block;
+	width: 220px;
+	text-align:center;
+}
+.list_title{
+	padding-left: 15px;
+}
+.matching_user{
+	padding: 20px;
+	width:520px;
+	height: 95px;
+	position:relative;
+}
+
+.profile{
+	width: 75px;
+	height: 75px;
+	display: inline;
+	border-radius: 75px;
+	float:left;
+	margin-right:15px;
+}
+
+.id{
+	font-size:20px;
+	padding: 5px;
+	display:inline-block;
+	width:340px;
+}
+
+.location{
+	display:inline-block;
+	width:340px;
+}
+
+.msg{
+	margin: auto;
+	display:inline-block;
+	position:absolute;
+	top: 25px;
+}
+>>>>>>> refs/heads/youngki

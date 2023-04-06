@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 iframe{
   overflow: hidden;
 }
@@ -47,4 +48,55 @@ a.button {
   background: #FF8E00;
   color: #ffffff;
   text-decoration: none;
+=======
+iframe{
+  overflow: hidden;
+}
+#title{
+  padding: 40px 0 50px;
+  text-align: center;
+}
+#shop{
+  width: 520px;
+  height: 700px;
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+iframe {
+  border: 1px solid rgba(255,255,255,0.15);
+  width: 480px;
+  height: 550px;
+}
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+a.button {
+  width: 480px;
+  display: block;
+  position: relative;
+  float: right;
+  padding: 0;
+  margin: 30px 20px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  color: #FFF;
+  border-radius: 5px;
+  transition: all 0.2s ;
+  text-decoration: none;
+}
+
+.btnOrange {
+  background: #FFAA40;
+}
+
+.btnFade.btnOrange:hover {
+  background: #FF8E00;
+  color: #ffffff;
+  text-decoration: none;
+>>>>>>> refs/heads/youngki
 }

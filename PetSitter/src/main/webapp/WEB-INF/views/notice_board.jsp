@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <head>
@@ -65,7 +66,7 @@
 		</article>
 		<article id="board">
 			<h2 class="title">Find : Pet Sitter</h2>
-			<a href="" title="Button fade orange" id="write" class="button btnFade btnOrange">글쓰기</a>
+			<a href="/board/saveForm" title="Button fade orange" id="write" class="button btnFade btnOrange">글쓰기</a>
 			<ul class="width">
 				<li>
 					<div class="subject">펫시터를 찾아요</div>

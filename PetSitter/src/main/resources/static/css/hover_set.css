@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 a :hover{
 	color:none;
 }
@@ -6,4 +7,14 @@ a{
 }
 li :hover{
 	color:#000;
+=======
+a :hover{
+	color:none;
+}
+a{
+	color:none;
+}
+li :hover{
+	color:#000;
+>>>>>>> refs/heads/youngki
 }

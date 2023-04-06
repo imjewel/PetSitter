@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 	<footer>
@@ -14,8 +15,8 @@
 	  <li><a href="/index"><img src="/img/home.png"><br>홈</a></li>
 	  <li><a href="/auth/notice"><img src="/img/board.png"><br>게시판</a></li>
 	  <li><a href=""><img src="/img/people.png"><br>매칭</a></li>
-	  <li><a href="/shopping"><img src="/img/shop.png"><br>쇼핑몰</a></li>
-	  <li><a href=""><img src="/img/profile.png"><br>마이페이지</a></li>
+	  <li><a href="/auth/shopping"><img src="/img/shop.png"><br>쇼핑몰</a></li>
+	  <li><a href="/myPage"><img src="/img/profile.png"><br>마이페이지</a></li>
 	</div>
 </div>
 <!-- <div class="moveTopBtn"><img src="img/pet_icon.png"><br>Top</div> -->

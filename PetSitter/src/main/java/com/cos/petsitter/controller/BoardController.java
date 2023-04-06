@@ -63,7 +63,7 @@ public class BoardController {
 			return "/notice_board";
 		}
 	//shopping
-		@GetMapping({"/shopping"}) 
+		@GetMapping({"/auth/shopping"}) 
 		public String shopping() { 
 			return "/shopping";
 		}
