@@ -19,6 +19,7 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
@@ -62,5 +63,6 @@ public class Board {
 	private List<Reply> reply;
 	
 	@CreationTimestamp 
+	@JsonFormat(shape= JsonFormat.Shape.STRING, pattern="yyyy-MM-dd")
 	private Timestamp createDate;
 }

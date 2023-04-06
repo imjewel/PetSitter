@@ -12,7 +12,7 @@
 	</footer>
 	<div class="bottom_menu">
 	  <li><a href="/index"><img src="/img/home.png"><br>홈</a></li>
-	  <li><a href="/auth/notice"><img src="/img/board.png"><br>게시판</a></li>
+	  <li><a href="/auth/board/list"><img src="/img/board.png"><br>게시판</a></li>
 	  <li><a href="/matching"><img src="/img/people.png"><br>매칭</a></li>
 	  <li><a href="/auth/shopping"><img src="/img/shop.png"><br>쇼핑몰</a></li>
 	  <li><a href="/myPage"><img src="/img/profile.png"><br>마이페이지</a></li>

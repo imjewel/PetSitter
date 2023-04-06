@@ -53,7 +53,7 @@ let index={
 			dataType:"json" 
 		}).done(function(resp){
 			alert("수정이 완료되었습니다.");
-			location.href="/";
+			location.href="/board/list";
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		});
@@ -68,7 +68,7 @@ let index={
 			dataType:"json" 
 		}).done(function(resp){
 			alert("삭제가 완료되었습니다.");
-			location.href="/";
+			location.href="/board/list";
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		});
@@ -91,7 +91,7 @@ let index={
 			dataType:"json" 
 		}).done(function(resp){
 			alert("댓글작성이 완료되었습니다.");
-			location.href=`/board/${boardId}`;
+			location.href=`/auth/board/${boardId}`;
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		});
@@ -104,7 +104,7 @@ let index={
 			dataType:"json" 
 		}).done(function(resp){
 			alert("댓글 삭제 성공");
-			location.href=`/board/${boardId}`;
+			location.href=`/auth/board/${boardId}`;
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		});

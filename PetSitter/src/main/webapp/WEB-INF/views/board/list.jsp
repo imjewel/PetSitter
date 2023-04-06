@@ -11,7 +11,7 @@
 	<c:forEach var="board" items="${board.content}">
 		<div class="card m-2">
 			<div class="card-body">
-				<h4 class="card-title"><a href="/board/${board.id}" class="btn">${board.title}</a></h4>
+				<h4 class="card-title"><a href="/auth/board/${board.id}" class="btn">${board.title}</a></h4>
 			</div>
 		</div>
 	</c:forEach>

@@ -28,7 +28,7 @@ public class BoardController {
 		model.addAttribute("board",boardService.글목록(pageable));
 		return "index";
 	}
-	
+	// auth를 추가한다 = 회원가입하지 않은 사람도 접근이 가능하다
 	//글 목록
 	@GetMapping({"/auth/board/list"})
 	public String list(Model model,@PageableDefault(size = 3, sort = "id", 
@@ -38,7 +38,7 @@ public class BoardController {
 	}
 	
 	//글 수정하기
-	@GetMapping("/auth/board/{id}/updateForm")
+	@GetMapping("/board/{id}/updateForm")
 	public String updateForm(@PathVariable int id, Model model) {
 		model.addAttribute("board",boardService.글상세보기(id));
 		return "board/updateForm";
