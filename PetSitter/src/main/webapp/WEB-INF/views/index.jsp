@@ -19,7 +19,6 @@
 <body>
   <div class="container"> 
     <div class="header">
-
       <a href="basic.html"><img id="logo" src="/img/logo1.png"></a>
       <input type="image" id="search-Btn" src="img/search.png">
 		<c:choose>
@@ -36,14 +35,11 @@
 	      </ul>
       	</c:otherwise>
       </c:choose>
-   
-    </div>
-    <div class="content">
-      
+      <input type="image" id="search-Btn" src="/img/search.png">
     </div>
     
 	<div class="container">
-		<c:forEach var="board" items="${boards.content}">
+		<c:forEach var="board" items="${board.content}">
 			<div class="card m-2">
 				<div class="card-body">
 					<h4 class="card-title">${board.title}</h4>
@@ -53,23 +49,23 @@
 		</c:forEach>
 		<ul class="pagination justify-content-center">
 			<c:choose>
-				<c:when test="${boards.first}">	
+				<c:when test="${board.first}">	
 					<li class="page-item disabled"><a class="page-link"
-						href="?page=${boards.number-1}">Previous</a></li> <!-- 첫번째 페이지일 경우 : 버튼 비활성화 -->
+						href="?page=${board.number-1}">Previous</a></li> <!-- 첫번째 페이지일 경우 : 버튼 비활성화 -->
 				</c:when>
 				<c:otherwise>
 					<li class="page-item"><a class="page-link"
-						href="?page=${boards.number-1}">Previous</a></li>
+						href="?page=${board.number-1}">Previous</a></li>
 				</c:otherwise>
 			</c:choose>
 			<c:choose>
-				<c:when test="${boards.last}">
+				<c:when test="${board.last}">
 					<li class="page-item disabled"><a class="page-link"
-						href="?page=${boards.number+1}">Next</a></li>
+						href="?page=${board.number+1}">Next</a></li>
 				</c:when>
 				<c:otherwise>
 					<li class="page-item"><a class="page-link"
-						href="?page=${boards.number+1}">Next</a></li>
+						href="?page=${board.number+1}">Next</a></li>
 				</c:otherwise>
 			</c:choose>
 		</ul>
@@ -97,7 +93,6 @@
         <li><a href="/board/list"><img src="/img/people1.png"><br>매칭</a></li>
         <li><a href=""><img src="/img/shop1.png"><br>쇼핑몰</a></li>
         <li><a href="/myPage"><img src="/img/profile1.png"><br>마이페이지</a></li>
-
       </ul>
     </div>
   </div>

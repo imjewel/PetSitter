@@ -34,7 +34,6 @@ public class BoardService {
 		return boardRepository.findAll(pageable);
 	}
 
-
 	@Transactional(readOnly = true)
 	public Boards 글상세보기(int id) {
 		return boardRepository.findById(id).orElseThrow(() -> {
