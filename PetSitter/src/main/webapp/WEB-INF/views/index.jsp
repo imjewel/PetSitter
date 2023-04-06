@@ -6,7 +6,7 @@
    <!-- <link href="/css/hover_set.css" rel="stylesheet"> -->
    <link href="/css/index.css" rel="stylesheet">
  </head> 
- <%@ include file="header.jsp" %>   
+ <%@ include file="layout/header.jsp" %>   
 <main>
    	<article class="main_banner">
    		<img class="banner_img" src="img/dogcat.png">
@@ -79,4 +79,4 @@
 	      </ul>
 	 </article>
    </main>
-<%@ include file="footer.jsp" %>
+<%@ include file="layout/footer.jsp" %>

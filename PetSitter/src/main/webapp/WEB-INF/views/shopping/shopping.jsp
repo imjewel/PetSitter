@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="header.jsp" %>
+<%@ include file="../layout/header.jsp" %>
 <head>
 	<link href="/css/shopping.css" rel="stylesheet">
 </head>
@@ -27,4 +27,4 @@
         <a href="https://arrr.kr/" class="button btnFade btnOrange">아르르로 바로가기</a> 
       </div> 
     </main>
-<%@ include file="footer.jsp" %>
+<%@ include file="../layout/footer.jsp" %>

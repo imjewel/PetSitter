@@ -24,13 +24,12 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-<script src="/js/top_button.js"></script>
 <link href="/css/basic.css" rel="stylesheet">
 </head>
 <body>
   <div class="container"> 
     <header>
-      <a href="basic.html"><img id="logo" src="/img/logo1.png"></a>
+      <a href="index"><img id="logo" src="/img/logo1.png"></a>
       <div class="login_button">
       	<c:choose>
       	<c:when test="${empty principal}">

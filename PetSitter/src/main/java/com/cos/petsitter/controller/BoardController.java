@@ -58,18 +58,18 @@ public class BoardController {
 	}
 	
 	//notice
-		@GetMapping({"/auth/notice"}) 
+		@GetMapping({"/notice"}) 
 		public String notice() { 
-			return "/notice_board";
+			return "board/notice_board";
 		}
 	//shopping
 		@GetMapping({"/shopping"}) 
 		public String shopping() { 
-			return "/shopping";
+			return "shopping/shopping";
 		}
-	//shopping
+	//matching
 		@GetMapping({"/matching"}) 
 		public String matching() { 
-			return "/matching";
+			return "matching/matching";
 		}
 }
