@@ -31,7 +31,7 @@ let index={
 			dataType:"json" 
 		}).done(function(resp){
 			alert("글쓰기가 완료되었습니다.");
-			location.href="/board/list";
+			location.href="/auth/board/list";
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		});
@@ -54,7 +54,7 @@ let index={
 			dataType:"json" 
 		}).done(function(resp){
 			alert("수정이 완료되었습니다.");
-			location.href="/board/list";
+			location.href="/auth/board/list";
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		});
@@ -69,7 +69,7 @@ let index={
 			dataType:"json" 
 		}).done(function(resp){
 			alert("삭제가 완료되었습니다.");
-			location.href="/board/list";
+			location.href="/auth/board/list";
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		});
