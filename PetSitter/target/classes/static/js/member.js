@@ -33,8 +33,12 @@ let index = {
             //application/json 뒤에는 ; 붙이면 안되고 charset=utf-8 쓰면 안됨
             dataType: "json"
         }).done(function(resp) {
-            alert("회원가입이 완료되었습니다.");
-            location.href = "/auth/login";
+			if(resp.status === 500){
+				alert("회원가입에 실패하였습니다.");
+			} else{
+				alert("회원가입이 완료되었습니다.");
+            location.href = "/";				
+			}
         }).fail(function(error) {
             alert(JSON.stringify(error));
         });
