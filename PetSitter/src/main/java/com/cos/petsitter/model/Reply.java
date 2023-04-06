@@ -37,11 +37,11 @@ public class Reply {
 	@Column(nullable=false, length=200)
 	private String content;
 	@ManyToOne //여러개의 답변은 하나의 게시글에 존재
-	@JoinColumn(name="boardsId")
-	private Boards boards;
+	@JoinColumn(name="boardId")
+	private Board board;
 	@ManyToOne
 	@JoinColumn(name="memberId")
-	private Member membr;
+	private Member member;
 	@CreationTimestamp 
 	private Timestamp createDate;
 }

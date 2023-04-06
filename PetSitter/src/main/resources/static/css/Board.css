@@ -1,0 +1,182 @@
+.title {
+	display: inline-block;
+	width: 480px;
+	height: 30px;
+}
+.more {
+	display: inline-block;
+	width: 20px;
+	height: 30px;
+	font-size: xx-large;
+}
+
+/* 부트스트랩 */
+.carousel-item {
+	width: 520px;
+	padding-top:20px;
+}
+
+.carousel-item > img {
+	width:200px !important;
+	border-radius: 50%;
+	margin: 0;
+	margin-left: 30px;
+}
+
+.carousel-caption {
+	color: #414141!important;
+	text-shadow: none !important;
+	right: 0 !important;
+	left:200px !important;
+	width: 280px;
+}
+
+.carousel-caption >h5, p {
+	width: 280px;
+}
+
+.carousel-control-prev {
+	color: #242424 !important;
+    font-size: 50px;
+    margin-left:5px;
+}
+
+.carousel-control-next {
+	color: #242424 !important;	
+    font-size: 50px;
+    margin-right:5px; 
+}
+
+/* 게시판 본문 */
+
+#board {
+  width: 520px;
+  float: left;
+  color: #292929;
+  background-color: white; 
+  
+}
+#board .title {
+  float: left;
+  width: 350px;
+  margin-top: 20px;
+}
+#board #write {
+	float: right;
+	width: 100px;
+	margin-right : 20px;
+}
+#board ul {
+  margin-top: 20px;
+  padding-inline-start:0;
+}
+#board ul li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  }
+#board .subject {
+  width: 380px;
+  margin-left: 15px;
+}
+.writer {
+  float: right;
+  width: 110px;
+  font-weight: lighter;
+  vertical-align: bottom;
+}
+#board .date {
+  float: left;
+  width: 380px;
+  font-weight: lighter;
+  font-size: smaller;
+  margin-left: 15px;
+  padding-top:10px;
+  color: #666;
+}
+
+/*더보기 버튼*/
+
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+a.button {
+  display: block;
+  position: relative;
+  float: left;
+  width: 480px;
+  padding: 0;
+  margin: 10px 20px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  color: #FFF;
+  border-radius: 5px;
+  transition: all 0.2s ;
+  text-decoration: none;
+}
+
+.btnOrange {
+  background: #FFAA40;
+}
+
+.btnFade.btnOrange:hover {
+  background: #FF8E00;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/*추가*/
+.title{
+	padding-left : 25px;
+}
+#post{
+  border-top: solid 1px #333;
+  height: 40px;
+  line-height: 40px;
+}
+ .grey{
+	background-color: #dbdbdb;
+ }
+ .width li{
+ 	width:520px;
+ }
+ 
+.underline h2{
+  text-align: center;
+  padding: 30px 0 20px;
+  float: left;
+  margin-left:88px;
+}
+.postcategory{
+  width: 520px;
+  display: inline-block;
+  text-align: center;
+}
+.postcategory li{
+  text-align: center;
+  font-size: 17px;
+}
+
+.two li{
+	margin-left: 100px;
+}
+.four li{
+	padding-left: 28px;
+}
+
+.underline{
+	width: 520px;
+	height: 100px;
+}
+.underline a:after {/*after 가상요소*/
+   display:block;/*a요소를 블록 요소라고 선언*/
+   content: '';
+   border-bottom: solid 3px #dc882d;
+   transform: scaleX(0);/*크기를 0으로 줌으로써 평상시엔 밑줄 없음*/
+   transition: transform 250ms ease-in-out; /*변형 방식*/
+}
+.underline a:hover:after {
+   transform: scaleX(1);/*a 속성에 hover시 기존 크기로*/
+}

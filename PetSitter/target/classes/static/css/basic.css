@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+body{
+  background: url('../img/dog.jpg')  no-repeat fixed;
+  background-size:cover;
+}
+.container{
+  width: 520px !important;
+  margin: 0;
+  padding:0 0 92px;
+  position: relative;
+  float: right;
+  right: 150px;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+  background-color: white;
+}
+@media screen and (max-width:768px){
+  body{
+    background: none;
+    background-color: #FFF;
+  }
+  .container{
+    margin: 0 auto;
+    float:none;
+    right: 0;
+  }
+  
+}
+a{
+  text-decoration: none !important;
+  color:#111;
+}
+
+a :hover{
+  text-decoration: none;
+  color: #111 !important;
+}
+
+li{
+  list-style: none;
+  float: left;
+}
+li :hover{
+  text-decoration: none;
+  color: #111 !important;
+}
+header{
+  margin: 0;
+  width: 520px;
+  height: 100px;
+  top : 0;
+  position: relative;
+}
+header #logo{
+  position: absolute;
+  top: 10px;
+}
+
+header li{
+	padding-left:12px;
+}
+
+header button{
+	border: none;
+	background-color: #FFAA40;
+	border-radius: 5px;
+	color:#fff;
+}
+article{
+	padding:50px 0 50px;
+}
+.login_button{
+	padding: 31px;
+	float:right;
+}
+
+footer{
+  width: 520px;
+  padding: 50px 0 20px;
+  display: block;
+  text-align: center;
+  background-color: white;
+}
+footer a{
+  float: right;
+  line-height: 100px;
+  padding-right: 50px;
+}
+
+footer p{
+  display: inline-block;
+  text-align: left;
+  font-size: 14px;
+  margin: 10px auto;
+  margin-left:80px;
+}
+.bottom_menu{
+  position: fixed;
+  bottom: 0;
+  height: 80px;
+  width: 520px;
+  background-color: #fff;
+}
+.bottom_menu a{
+  color: #000;
+}
+.bottom_menu li{
+  list-style: none;
+  width: 102px;
+  text-align: center;
+  padding-top: 12px;
+}
+/* .moveTopBtn {
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  text-align: center;
+} */

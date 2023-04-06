@@ -2,9 +2,9 @@ package com.cos.petsitter.repository;
  
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.cos.petsitter.model.Boards;
+import com.cos.petsitter.model.Board;
 
 
-public interface BoardRepository extends JpaRepository<Boards,Integer>{
+public interface BoardRepository extends JpaRepository<Board,Integer>{
 	
 }
