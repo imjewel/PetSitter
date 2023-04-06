@@ -31,11 +31,12 @@ let index={
 			dataType:"json" 
 		}).done(function(resp){
 			alert("글쓰기가 완료되었습니다.");
-			location.href="/board/list";
+			location.href="/auth/board/list";
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		});
 	},
+
 	update: function(){
 		let id=$("#id").val();
 		
@@ -53,7 +54,7 @@ let index={
 			dataType:"json" 
 		}).done(function(resp){
 			alert("수정이 완료되었습니다.");
-			location.href="/";
+			location.href="/auth/board/list";
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		});
@@ -68,7 +69,43 @@ let index={
 			dataType:"json" 
 		}).done(function(resp){
 			alert("삭제가 완료되었습니다.");
-			location.href="/";
+			location.href="/auth/board/list";
+		}).fail(function(error){
+			alert(JSON.stringify(error));
+		});
+	},
+	
+	replySave: function(){
+		let data={
+			content: $("#reply-content").val()
+		};
+		
+		let boardId = $("#boardId").val();
+		
+		console.log(data);
+		
+		$.ajax({ 
+			type:"POST",
+			url:`/api/board/${boardId}/reply`,
+			data:JSON.stringify(data), 
+			contentType:"application/json; charset=utf-8",
+			dataType:"json" 
+		}).done(function(resp){
+			alert("댓글작성이 완료되었습니다.");
+			location.href=`/auth/board/${boardId}`;
+		}).fail(function(error){
+			alert(JSON.stringify(error));
+		});
+	},
+	
+	replyDelete: function(boardId, replyId){
+		$.ajax({ 
+			type:"DELETE",
+			url:`/api/board/${boardId}/reply/${replyId}`,
+			dataType:"json" 
+		}).done(function(resp){
+			alert("댓글 삭제 성공");
+			location.href=`/auth/board/${boardId}`;
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		});
