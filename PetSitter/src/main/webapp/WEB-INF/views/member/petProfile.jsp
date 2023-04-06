@@ -19,6 +19,10 @@
 <body>
 	<div class="container" id="container">
 		<form action="/api/pet" method="POST">
+<<<<<<< HEAD
+=======
+		<input type="hidden" id="id" value="${pet.member.id==principal.member.id }">
+>>>>>>> refs/heads/main
 		<header>
 		  <div class="header">
 		      <a href="index"><img id="logo" src="/img/logo1.png"></a>

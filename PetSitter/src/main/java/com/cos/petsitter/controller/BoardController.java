@@ -6,13 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.cos.petsitter.config.auth.PrincipalDetail;
 import com.cos.petsitter.service.BoardService;
 
 @Controller
@@ -28,7 +26,6 @@ public class BoardController {
 		model.addAttribute("board",boardService.글목록(pageable));
 		return "index";
 	}
-	// auth를 추가한다 = 회원가입하지 않은 사람도 접근이 가능하다
 	//글 목록
 	@GetMapping({"/auth/board/list"})
 	public String list(Model model,@PageableDefault(size = 3, sort = "id", 
@@ -38,7 +35,7 @@ public class BoardController {
 	}
 	
 	//글 수정하기
-	@GetMapping("/board/{id}/updateForm")
+	@GetMapping("/auth/board/{id}/updateForm")
 	public String updateForm(@PathVariable int id, Model model) {
 		model.addAttribute("board",boardService.글상세보기(id));
 		return "board/updateForm";
@@ -52,7 +49,7 @@ public class BoardController {
 	}
 	
 	//USER권한이 필요
-	@GetMapping({"/board/saveForm"}) 
+	@GetMapping({"/auth/board/saveForm"}) 
 	public String saveForm() { 
 		return "board/saveForm";
 	}
