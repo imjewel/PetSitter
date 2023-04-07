@@ -102,13 +102,9 @@ a:visited {
 }
 
 a.button {
-  display: block;
-  position: relative;
   float: left;
-  width: 480px;
   padding: 0;
   margin: 10px 20px;
-  font-weight: 600;
   text-align: center;
   line-height: 50px;
   color: #FFF;
@@ -183,9 +179,30 @@ a.button {
 .footp {
 	padding-bottom:0;
 }
+
 .btn-primary{
 	background: #FF8E00;
+	color:#ffffff;
 	border:none;
 	float:right;
-	margin: 10px 10px;
+}
+
+.form-control{
+	width:390px;
+	display:inline-block;
+}
+.comment{
+	width:330px;
+	padding-right:10px;
+	line-height:40px;
+}
+.form-group{
+	margin-bottom: 15px;
+}
+.card-title{
+	width:370px;
+}
+
+.font-italic{
+	line-height:40px;
 }

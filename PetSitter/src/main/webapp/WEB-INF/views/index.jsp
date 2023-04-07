@@ -56,13 +56,17 @@
 			<a href="/auth/board/list" class="more">&raquo;</a>
 		</div>
 		<ul class="width">
-			<li>
-				<div class="subject">펫시터를 찾아요</div>
-				<div class="writer">펫시터 아이디</div>
-				<div class="clear"></div>
-				<div class="date">2023.03.03</div>
-			</li>
-	    </ul>
+				<li>
+					<c:forEach var="board" items="${board.content}">
+						<div class="card m-2">
+							<div class="card-body">
+								<h4 class="card-title">${board.title}</h4>
+								<a href="/auth/board/${board.id}" class="btn btn-primary">상세보기</a>
+							</div>
+						</div>
+					</c:forEach>
+				</li>
+		    </ul>
 	  </article>
 	  <article id="board">
 		  <div class="matching_result">

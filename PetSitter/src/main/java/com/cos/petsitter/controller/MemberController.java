@@ -29,5 +29,8 @@ public class MemberController {
 	public String myPage() {
 		return "member/myPage";
 	}
-	
+	@GetMapping("/customer_service")
+	public String customer_service() {
+		return "customer_service";
+	}
 }
