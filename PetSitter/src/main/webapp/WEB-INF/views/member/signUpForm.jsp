@@ -10,7 +10,7 @@
 <body>
 <div class="container" id="container">
   <div class="form-container sign-in-container">
-    <form method="post">
+    <form>
       <h1>Sign Up</h1>
       <input type="text" id="username" name="username" placeholder="ID" />
       <input type="password" id="password" name="password" placeholder="Password" />

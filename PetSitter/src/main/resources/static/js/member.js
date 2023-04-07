@@ -17,6 +17,7 @@ let index = {
     save: function(event) {
         event.preventDefault();
         let data = {
+			id: $("#id").val(),
 			username: $("#username").val(),
             password: $("#password").val(),
             nickname: $("#nickname").val(),
