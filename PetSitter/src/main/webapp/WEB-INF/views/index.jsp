@@ -12,11 +12,11 @@
    		<div class="info"><h2>빠르고 간편하게 <br>펫시터를 찾으세요!</h2><br>
    		  <span>우리아이에게 외로운 시간대신<br>행복한 시간을 선사하세요.</span></div>
    		<div class="sitter">원하는 날을 골라 반려동물을<br>돌보며 수입을 벌어보세요.</div>
-   		<a href="" class="sitter_button">MyPetsi 펫시터<br>등록하기</a>
+   		<a href="/myPage" class="sitter_button">MyPetsi 펫시터<br>등록하기</a>
    	</article>
 	<article class="matching_result">
-		<h3 class="title">new 매칭!</h3>
-		<a href="#"><p class="more">&raquo;</p></a>
+		<h3 class="title"><a href="/matching">new 매칭!👨‍👦‍👦</a></h3>
+		<a href="/matching"><p class="more">&raquo;</p></a>
 		<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 		  <div class="carousel-inner">
 		    <div class="carousel-item active">
@@ -53,8 +53,8 @@
 	</article>
 	<article id="board">
 		<div class="matching_result">
-			<h3 class="title"><a href="notice_borad.jsp">게시판으로 이동</a></h3>
-			<a href="notice_borad.jsp"><p class="more">&raquo;</p></a>
+			<h3 class="title"><a href="/notice">게시판으로 이동📋</a></h3>
+			<a href="/notice"><p class="more">&raquo;</p></a>
 		</div>
 		<ul class="width">
 			<li>
@@ -68,8 +68,8 @@
 	  </article>
 	  <article id="board">
 		  <div class="matching_result">
-			<h3 class="title"><a href="">공지사항으로 이동</a></h3>
-			<a href="#"><p class="more">&raquo;</p></a>
+			<h3 class="title"><a href="/customer_service">공지사항📃</a></h3>
+			<a href="/customer_service"><p class="more">&raquo;</p></a>
 		  </div>
 		  <ul>
 			<li>

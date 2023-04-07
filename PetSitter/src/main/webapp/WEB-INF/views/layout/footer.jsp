@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 	<footer>
-   		<img src="/img/footerlogo.png">
    		<a href="/customer_service"><spen class="bold">MyPetSi 고객센터 바로가기</spen></a>
+    	<a href="/index"><img src="/img/footerlogo.png"></a>
     	<p class="footp">
 	      회사 : MyPetSi<br>
 	      도로명주소 : xx시 xx구 xx동 xx번길<br>
