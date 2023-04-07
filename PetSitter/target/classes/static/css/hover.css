@@ -1,8 +1,5 @@
 @charset "UTF-8";
-a:hover{
-	color:black;
-	text-decoration : none;
-}
+
 .two{
  	display:none;
 } 
@@ -14,4 +11,14 @@ a:hover{
 }
 footer p{
 	padding-bottom:80px;
+}
+
+.page-item{
+	display:inline-block;
+}
+.left{
+	padding-left:185px;
+}
+.page-link{
+	color:#000;
 }
