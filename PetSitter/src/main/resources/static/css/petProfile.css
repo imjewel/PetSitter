@@ -69,13 +69,9 @@ b {
 	height:300px;
 }
 
-#pageList {
-	margin-top: 30px;
-}
-
 #pageList li {
-	margin-top: 20px;
-	line-height:30px;
+	line-height:50px;
+	/*height: 88px;*/
 	text-align: left;
 	padding-left: 30px;
 }
@@ -104,7 +100,7 @@ input {
 }
 
 #etc {
-	width:100%;	
+	width:300px;	
 }
 
 textarea {
@@ -114,7 +110,7 @@ textarea {
 	width: 90%;
 }
 
-.save {
+#save {
 	background-color: #46c8ff;
 	color: white;
 	border: none;

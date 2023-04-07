@@ -1,22 +1,21 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%> 
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%> 
+<%@ include file="layout/header.jsp" %> 
  <head>
    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Board.css">
-   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-   <!-- <link href="/css/hover_set.css" rel="stylesheet"> -->
    <link href="/css/index.css" rel="stylesheet">
- </head> 
- <%@ include file="header.jsp" %>   
-	<main>
+ </head>   
+<main>
    	<article class="main_banner">
    		<img class="banner_img" src="img/dogcat.png">
    		<div class="info"><h2>빠르고 간편하게 <br>펫시터를 찾으세요!</h2><br>
    		  <span>우리아이에게 외로운 시간대신<br>행복한 시간을 선사하세요.</span></div>
    		<div class="sitter">원하는 날을 골라 반려동물을<br>돌보며 수입을 벌어보세요.</div>
-   		<a href="" class="sitter_button">MyPetsi 펫시터<br>등록하기</a>
+   		<a href="/myPage" class="sitter_button">MyPetsi 펫시터<br>등록하기</a>
    	</article>
 	<article class="matching_result">
-		<h3 class="title">new 매칭!</h3>
-		<a href="#"><p class="more">&raquo;</p></a>
+		<h3 class="title"><a href="/matching">new 매칭!👨‍👦‍👦</a></h3>
+		<a href="/matching" class="more">&raquo;</a>
 		<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 		  <div class="carousel-inner">
 		    <div class="carousel-item active">
@@ -53,8 +52,8 @@
 	</article>
 	<article id="board">
 		<div class="matching_result">
-			<h3 class="title"><a href="notice_borad.jsp">게시판으로 이동</a></h3>
-			<a href="notice_borad.jsp"><p class="more">&raquo;</p></a>
+			<h3 class="title"><a href="/auth/board/list">게시판으로 이동📋</a></h3>
+			<a href="/auth/board/list" class="more">&raquo;</a>
 		</div>
 		<ul class="width">
 			<li>
@@ -63,13 +62,12 @@
 				<div class="clear"></div>
 				<div class="date">2023.03.03</div>
 			</li>
-			<a href="" title="Button fade orange" id="plus" class="button btnFade btnOrange">더보기</a>
 	    </ul>
 	  </article>
 	  <article id="board">
 		  <div class="matching_result">
-			<h3 class="title"><a href="">공지사항으로 이동</a></h3>
-			<a href="#"><p class="more">&raquo;</p></a>
+			<h3 class="title"><a href="/customer_service">공지사항📃</a></h3>
+			<a href="/customer_service" class="more">&raquo;</a>
 		  </div>
 		  <ul>
 			<li>
@@ -78,4 +76,4 @@
 	      </ul>
 	 </article>
    </main>
-<%@ include file="footer.jsp" %>
+<%@ include file="layout/footer.jsp" %>

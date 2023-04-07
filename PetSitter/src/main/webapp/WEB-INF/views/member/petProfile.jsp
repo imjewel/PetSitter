@@ -1,12 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-<%@ taglib prefix = "sec" uri = "http://www.springframework.org/security/tags" %>
-
-<sec:authorize access="isAuthenticated()">
-	<sec:authentication property="principal" var="principal"/>
-</sec:authorize>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,11 +7,11 @@
 <link rel="stylesheet" type="text/css" href="/css/petProfile.css">
 
 <meta charset="UTF-8">
-<title>PetProfile</title>
+<title>Login Form</title>
 </head>
 <body>
 	<div class="container" id="container">
-		<form action="/api/pet" method="POST">
+		<form>
 		<header>
 		  <div class="header">
 		      <a href="index"><img id="logo" src="/img/logo1.png"></a>
@@ -28,43 +21,37 @@
 		<a href="javascript:history.back()" class="btn btn-primary"><</a>
 		<h1>반려동물 정보</h1>
 		</header>
-		<section id="photo">
-			<input type="file" name="files" id="files">
-			<input type="submit" id="submit" value="사진 등록하기">
-		</section>
+		<section id="photo"></section>
 		<section id="pageList">
-		<b style="margin-left: 30px;">기본 정보</b>
 			<ul>
 				<li>
-					<label for="name">이름</label>
-					<input type="text" id="name" name="name" value="${pet.name}"placeholder="예) 댕댕이"></input>
+					<b>기본 정보</b>
 				</li>
 				<li>
-					<label for="category">강아지 or 고양이</label>
-					<input type="radio" id="category" name="category" value="puppy">강아지
-					<input type="radio" id="category" name="category" value="cat">고양이
+					<label for="name">이름</label>
+					<input type="text" name="name" placeholder="예) 댕댕이"></input>
 				</li>
 				<li>
 					<label for="gender">성별</label>
-					<input type="radio" id="gender" name="gender" value="남자아이">남자아이
-					<input type="radio" id="gender" name="gender" value="야자아이">여자아이
+					<input type="radio" name="gender" value="남자아이">남자아이
+					<input type="radio" name="gender" value="야자아이">여자아이
 				</li>
 				<li>
-					<label for="pet_type">품종</label>
-					<input type="text" id="pet_type" name="pet_type" placeholder="예) 말티즈 or 렉돌"></input>
+					<label for="dog_type">견종</label>
+					<input type="text" name="dog_type" placeholder="예) 말티즈"></input>
 				</li>
 				<li>
-				  <label for="age">나이</label>
-				  <input type="text" id="age" name="age">살
+				  <label for="birth">생일</label>
+				  <input type="date" name="birth">
 				</li>
 				<li>
-					<label for="weight">몸무게</label>
-					<input type="text" id="weight" name="weight" placeholder="예) 2.8"></input>kg
+					<label for="kg">몸무게</label>
+					<input type="text" name="kg" placeholder="예) 2.8"></input>kg
 				</li>
 				<li>
 					<label for="neutered">중성화</label>
-					<input type="radio" id="neutered" name="neutered" value="yes">했어요
-					<input type="radio" id="neutered" name="neutered" value="no">안했어요
+					<input type="radio" name="neutered" value="yes">했어요
+					<input type="radio" name="neutered" value="no">안했어요
 				</li>
 				<li>
 					<label for="hospital">동물병원</label>
@@ -72,29 +59,28 @@
 				</li>
 			</ul>
 		</section>
-		<b style="margin-left:30px">접종 사항</b>
-			<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" style="margin-top:20px;">
-				<input type="checkbox" class="btn-check" id="vaccin" value="Rabies" autocomplete="off">
-				<label class="btn btn-outline-primary" for="vaccin">광견병</label>
+			<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+				<input type="checkbox" class="btn-check" id="Rabies" autocomplete="off">
+				<label class="btn btn-outline-primary" for="Rabies">광견병</label>
 				
-				<input type="checkbox" class="btn-check" id="vaccin" value="comprehensive" autocomplete="off">
-				<label class="btn btn-outline-primary" for="vaccin">종합 백신</label>
+				<input type="checkbox" class="btn-check" id="comprehensive" autocomplete="off">
+				<label class="btn btn-outline-primary" for="comprehensive">종합 백신</label>
 				
-				<input type="checkbox" class="btn-check" id="vaccin" value="corona" autocomplete="off">
-				<label class="btn btn-outline-primary" for="vaccin">코로나 백신</label>
+				<input type="checkbox" class="btn-check" id="corona" autocomplete="off">
+				<label class="btn btn-outline-primary" for="corona">코로나 백신</label>
 				
-				<input type="checkbox" class="btn-check" id="vaccin" value="kennel" autocomplete="off">
-				<label class="btn btn-outline-primary" for="vaccin">켄넬코프</label>
+				<input type="checkbox" class="btn-check" id="kennel" autocomplete="off">
+				<label class="btn btn-outline-primary" for="kennel">켄넬코프</label>
 				
-				<input type="checkbox" class="btn-check" id="vaccin" value="heartworm" autocomplete="off">
-				<label class="btn btn-outline-primary" for="vaccin">심장 사상충</label>
+				<input type="checkbox" class="btn-check" id="heartworm" autocomplete="off">
+				<label class="btn btn-outline-primary" for="heartworm">심장 사상충</label>
 				
-				<input type="checkbox" class="btn-check" id="vaccin" value="ectoparasite" autocomplete="off">
-				<label class="btn btn-outline-primary" for="vaccin">외부 기생충</label>
+				<input type="checkbox" class="btn-check" id="ectoparasite" autocomplete="off">
+				<label class="btn btn-outline-primary" for="ectoparasite">외부 기생충</label>
 			</div>
-		<section id="etc" style="margin-top:50px;">
-			<b style="margin-left:30px;">돌봄시 참고사항</b>	
-			<textarea rows="10" cols="200"></textarea>
+		<section id="etc">
+			<b style="padding-left:30px;">돌봄시 참고사항</b>	
+			<textarea rows="10" cols="100"></textarea>
 		</section>
 		<section id="bottom_logo">
 		    <div>
@@ -122,11 +108,8 @@
 		      </ul>
 	    	</div>
     	</section>
-    	</form>
-		<button id="btn-petsave" class="save"><b>저장하기</b></button>
-		
+			<button id="save"><b>저장하기</b></button>
+		</form>
 	</div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="/js/pet.js"></script>
 </body>
 </html>
