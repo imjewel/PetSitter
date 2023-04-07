@@ -1,10 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<%@ include file="../header.jsp"%>
-<head>
-	<link>
-</head>
+<%@ include file="../layout/header.jsp"%>
 <div class="container">
 
 	<button class="btn btn-secondary" onclick="history.back()">돌아가기</button>
@@ -25,9 +21,13 @@
 	<hr />
 	<div>
 		<div>${board.content}</div>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
 	</div>
 	<hr />
-	
 	<div class="card">	<!-- 댓글 작성하기 -->
 		<form>
 			<input type="hidden" id="boardId" value="${board.id}"/>
@@ -55,11 +55,9 @@
 			</c:forEach>
 			
 		</ul>
-	</div>	
-	
-	
+	</div>
 </div>
 <br />
 <script type="text/javascript" src="/js/board.js"></script>
-<%@ include file="../footer.jsp"%>
+<%@ include file="../layout/footer.jsp"%>
 

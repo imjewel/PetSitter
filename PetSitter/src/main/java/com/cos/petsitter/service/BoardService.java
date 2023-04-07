@@ -23,8 +23,8 @@ public class BoardService {
 	private ReplyRepository replyRepository;
 	
 	@Transactional
-	public void 글쓰기(Board board, Member member) { // title, content
-		board.setCount(0);
+	public void 글쓰기(Board board, Member member) { // title, content만 있다
+		board.setCount(0);	//강제로 넣어주는 값
 		board.setMember(member);
 		boardRepository.save(board);
 	}
