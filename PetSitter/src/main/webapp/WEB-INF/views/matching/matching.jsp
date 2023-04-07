@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="../layout/header.jsp" %>
 <head>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Board.css">
 	<link href="/css/matching.css" rel="stylesheet">
 </head>
-<%@ include file="../layout/header.jsp" %>
     <main>
        <article>
     		<div class="home_title"><h2>나와 매칭된 회원들을 둘러보고<br> 대화를 나누어 보세요!</h2></div>

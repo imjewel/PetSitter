@@ -5,6 +5,12 @@
 	<link href="/css/shopping.css" rel="stylesheet">
 </head>
     <main>
+    	<div class="developer">
+    		<form action="">
+    			<input type="button" value="등록하기" onclick="">
+    			<input type="text" class="input_url" id="new_shop">
+    		</form>
+    	</div>
       <h2 id="title">✨MY PETTSI의 추천 애견용품샵</h2>
       <div id="shop">
         <iframe class="shoppingmall" src="https://www.biteme.co.kr/shop/main"></iframe><br>

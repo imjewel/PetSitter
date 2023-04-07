@@ -1,11 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="../layout/header.jsp" %>
 <head>
   <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Board.css">
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
   <link href="/css/hover.css" rel="stylesheet">
 </head>
-<%@ include file="../layout/header.jsp" %>
     <main>
     	<div class="underline">
 	    	<h2><a href="" class="matching_borad">매칭게시판</a></h2>

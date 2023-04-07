@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="../layout/header.jsp"%>
-<div class="container">
 	<c:forEach var="board" items="${boards.content}">
 		<div class="card m-2">
 			<div class="card-body">
@@ -33,5 +32,4 @@
 			</c:otherwise>
 		</c:choose>
 	</ul>
-</div>
 <%@ include file="../layout/footer.jsp"%>

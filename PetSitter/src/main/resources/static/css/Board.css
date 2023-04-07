@@ -180,3 +180,6 @@ a.button {
 .underline a:hover:after {
    transform: scaleX(1);/*a 속성에 hover시 기존 크기로*/
 }
+.footp {
+	padding-bottom:0;
+}
