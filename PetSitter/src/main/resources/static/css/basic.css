@@ -36,19 +36,11 @@ a{
   color:#111;
 }
 
-a :hover{
-  text-decoration: none;
-  color: #111 !important;
-}
-
 li{
   list-style: none;
   float: left;
 }
-li :hover{
-  text-decoration: none;
-  color: #111 !important;
-}
+
 header{
   margin: 0;
   width: 520px;
@@ -119,3 +111,6 @@ footer p{
   right: 50px;
   text-align: center;
 } */
+.form_write{
+	padding: 50px 10px 50px;
+}

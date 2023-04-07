@@ -183,3 +183,9 @@ a.button {
 .footp {
 	padding-bottom:0;
 }
+.btn-primary{
+	background: #FF8E00;
+	border:none;
+	float:right;
+	margin: 10px 10px;
+}

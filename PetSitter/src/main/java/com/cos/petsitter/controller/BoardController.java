@@ -57,11 +57,6 @@ public class BoardController {
 		return "board/saveForm";
 	}
 	
-	//notice
-	@GetMapping({"/notice"}) 
-	public String notice() { 
-		return "board/notice_board";
-	}
 	//shopping
 	@GetMapping({"/shopping"}) 
 	public String shopping() { 
