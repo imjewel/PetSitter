@@ -25,8 +25,8 @@
 		    </div>
 		  </div>
 		<article id="matching_result">
-			<h3 class="title">new 매칭!</h3>
-			<a href="#"><p class="more">&raquo;</p></a>
+			<h3 class="title"><a href="/matching">new 매칭!👨‍👦‍👦</a></h3>
+			<a href="/matching" class="more">&raquo;</a>
 			<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 			  <div class="carousel-inner">
 			    <div class="carousel-item active">
@@ -61,18 +61,50 @@
 			  </button>
 			</div>
 		</article>
+		
 		<article id="board">
 			<h2 class="title">Find : Pet Sitter</h2>
-			<a href="" title="Button fade orange" id="write" class="button btnFade btnOrange">글쓰기</a>
+			<a href="/board/saveForm" title="Button fade orange" id="write" class="button btnFade btnOrange">글쓰기</a>
 			<ul class="width">
 				<li>
 					<div class="subject">펫시터를 찾아요</div>
 					<div class="writer">펫시터 아이디</div>
 					<div class="clear"></div>
 					<div class="date">2023.03.03</div>
+					
+					<c:forEach var="board" items="${boards.content}">
+						<div class="card m-2">
+							<div class="card-body">
+								<h4 class="card-title">${board.title}</h4>
+								<a href="/board/${board.id}" class="btn btn-primary">상세보기</a>
+							</div>
+						</div>
+					</c:forEach>
 				</li>
-		    </ul>
-		    <a class="button btnFade btnOrange">더보기</a>
+		    	</ul>
+				<ul class="center">
+					<c:choose>
+						<c:when test="${boards.first}">
+							<li class="page-item disabled"><a class="page-link"
+								href="?page=${boards.number-1}">Previous</a></li>
+						</c:when>
+						<c:otherwise>
+							<li class="page-item left"><a class="page-link"
+								href="?page=${boards.number-1}">Previous</a></li>
+						</c:otherwise>
+					</c:choose>
+					
+					<c:choose>
+						<c:when test="${boards.last}">
+							<li class="page-item disabled"><a class="page-link"
+								href="?page=${boards.number+1}">Next</a></li>
+						</c:when>
+						<c:otherwise>
+							<li class="page-item"><a class="page-link"
+								href="?page=${boards.number+1}">Next</a></li>
+						</c:otherwise>
+					</c:choose>
+				</ul>
 		  </article>
       </main>
       <%@ include file="../layout/footer.jsp" %>

@@ -15,3 +15,13 @@ a:hover{
 footer p{
 	padding-bottom:80px;
 }
+
+.page-item{
+	display:inline-block;
+}
+.left{
+	padding-left:185px;
+}
+.page-link{
+	color:#000;
+}

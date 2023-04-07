@@ -3,7 +3,6 @@
 <%@ include file="layout/header.jsp" %> 
  <head>
    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Board.css">
-   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
    <link href="/css/index.css" rel="stylesheet">
  </head>   
 <main>
@@ -16,7 +15,7 @@
    	</article>
 	<article class="matching_result">
 		<h3 class="title"><a href="/matching">new 매칭!👨‍👦‍👦</a></h3>
-		<a href="/matching"><p class="more">&raquo;</p></a>
+		<a href="/matching" class="more">&raquo;</a>
 		<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 		  <div class="carousel-inner">
 		    <div class="carousel-item active">
@@ -53,8 +52,8 @@
 	</article>
 	<article id="board">
 		<div class="matching_result">
-			<h3 class="title"><a href="/notice">게시판으로 이동📋</a></h3>
-			<a href="/notice"><p class="more">&raquo;</p></a>
+			<h3 class="title"><a href="/auth/board/list">게시판으로 이동📋</a></h3>
+			<a href="/auth/board/list" class="more">&raquo;</a>
 		</div>
 		<ul class="width">
 			<li>
@@ -63,13 +62,12 @@
 				<div class="clear"></div>
 				<div class="date">2023.03.03</div>
 			</li>
-			<a href="" title="Button fade orange" id="plus" class="button btnFade btnOrange">더보기</a>
 	    </ul>
 	  </article>
 	  <article id="board">
 		  <div class="matching_result">
 			<h3 class="title"><a href="/customer_service">공지사항📃</a></h3>
-			<a href="/customer_service"><p class="more">&raquo;</p></a>
+			<a href="/customer_service" class="more">&raquo;</a>
 		  </div>
 		  <ul>
 			<li>

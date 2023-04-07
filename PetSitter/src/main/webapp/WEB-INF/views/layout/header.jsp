@@ -29,7 +29,7 @@
 <body>
   <div class="container"> 
     <header>
-      <a href="index"><img id="logo" src="/img/logo1.png"></a>
+      <a href="/index"><img id="logo" src="/img/logo1.png"></a>
       <div class="login_button">
       	<c:choose>
       	<c:when test="${empty principal}">

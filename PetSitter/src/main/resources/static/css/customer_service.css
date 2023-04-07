@@ -1,7 +1,14 @@
 @charset "UTF-8";
 .customer_title{
-	padding-left:15px;
+	text-align:center;
 }
 .banner_img{
 	padding-left:10px;
+}
+.write{
+	font-size: 20px;
+}
+.gray{
+	color:gray;
+	font-size:12px;
 }
