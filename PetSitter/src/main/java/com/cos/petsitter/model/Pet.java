@@ -23,7 +23,7 @@ import lombok.NoArgsConstructor;
 public class Pet {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="PET_SEQ_GENERATOR")
-	private long id;
+	private int id;
 	
 	@ManyToOne
 	@JoinColumn(name = "memberId")

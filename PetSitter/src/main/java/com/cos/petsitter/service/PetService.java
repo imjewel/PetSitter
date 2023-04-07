@@ -21,7 +21,7 @@ public class PetService {
 	}
 	
 	@Transactional(readOnly = true)
-	public Pet info(int id) {
+	public Pet petInfo(int id) {
 		return petRepository.findById(id).orElseThrow(() -> {
 			return new IllegalArgumentException("글 상세보기 실패: 아이디를 찾을 수 없습니다.");
 		});

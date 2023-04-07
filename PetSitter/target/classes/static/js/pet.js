@@ -10,23 +10,23 @@ let index={
 	    let data = {
 	      id: $("#id").val(),
 	      name: $("#name").val(),
-	      category: $("input[name='category']:checked").val(),
 	      gender: $("input[name='gender']:checked").val(),
+	      category: $("input[name='category']:checked").val(),
 	      pet_type: $("#pet_type").val(),
-	      weight: $("#weight").val(),
 	      age: $("#age").val(),
+  	      weight: $("#weight").val(),
 	      neutered: $("input[name='neutered']:checked").val(),
 	      hospital: $("#hospital").val(),
 	      vaccine: $("input[name='vaccine']:checked").val(),
 	      etc: $("#etc").val(),
-	      img: $("#files").prop("files")[0]
+	      //img: $("#files").prop("files")[0]
 	    };
 	    let formData = new FormData();
 	    formData.append("data", JSON.stringify(data));
 	    formData.append("img", data.img);
 		$.ajax({ 
 			type:"POST",
-			url:"/api/pet/{id}",
+			url:"/api/pet",
 			data:JSON.stringify(data), 
 			contentType:"application/json; charset=utf-8",
 			dataType:"json" 

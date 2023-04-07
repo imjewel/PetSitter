@@ -21,9 +21,9 @@ public class petApiController {
 	@Autowired
 	private PetService petService;
 	
-	@PostMapping("/api/pet/{id}")
+	@PostMapping("/api/pet")
 	public ResponseDto<Integer> save(@RequestBody Pet pet, @AuthenticationPrincipal PrincipalDetail principal ) {
-		petService.create(pet, principal.getMember());
+		petService.create(pet,principal.getMember());
 		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
 	}
 	

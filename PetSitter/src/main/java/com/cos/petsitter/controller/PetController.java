@@ -12,18 +12,26 @@ import com.cos.petsitter.service.PetService;
 public class PetController {
 	
 	@Autowired
-	private PetService petService;
-
-	@GetMapping("/petCreate")
-	public String petCreate() {
-		return "member/petCreate";
-	}
+	public PetService petService;
+	
+	//글 수정하기
+//	@GetMapping("/pet/{id}/petUpdate")
+//	public String updateForm(@PathVariable int id, Model model) {
+//		model.addAttribute("board",petService.글상세보기(id));
+//		return "board/updateForm";
+//	}
 	
 	//글 상세보기
 	@GetMapping("/petProfile/{id}")
 	public String findById(@PathVariable int id, Model model) {
-		model.addAttribute("pet",petService.info(id));
-		return "board/detail";
+		model.addAttribute("pet",petService.petInfo(id));
+		return "member/petProfile";
+	}
+	
+	//USER권한이 필요
+	@GetMapping("/petCreate") 
+	public String saveForm() { 
+		return "member/petCreate";
 	}
 
 	
