@@ -4,7 +4,7 @@
 <%@ include file="../layout/header.jsp"%>
 <html>
 <head>
-	<link href="/css/list.css" rel="stylesheet">
+	<!-- <link href="/css/board/list.css" rel="stylesheet"> -->
 </head>
 <body>
 <div class="container">

@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
 *{
-	
+	width:520px;
+	margin:0 auto;
 }
 .container {
 	width:520px;
