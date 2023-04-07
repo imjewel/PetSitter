@@ -4,7 +4,7 @@
 <html>
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="/css/petProfile.css">
+<link rel="stylesheet" type="text/css" href="/css/petCreate.css">
 
 <meta charset="UTF-8">
 <title>Login Form</title>
@@ -12,6 +12,7 @@
 <body>
 	<div class="container" id="container">
 		<form>
+		<input type="hidden" id="boardId" value="${pet.id}"/>
 		<header>
 		  <div class="header">
 		      <a href="index"><img id="logo" src="/img/logo1.png"></a>
@@ -29,7 +30,7 @@
 				</li>
 				<li>
 					<label for="name">이름</label>
-					<input type="text" name="name" placeholder="예) 댕댕이"></input>
+					<input type="text" name="name" placeholder="${pet.name}"></input>
 				</li>
 				<li>
 					<label for="gender">성별</label>
@@ -108,8 +109,11 @@
 		      </ul>
 	    	</div>
     	</section>
-			<button id="save"><b>저장하기</b></button>
+    		<button onclick="loaction.href='/petCreate'"><b>수정하기</b></button>
+			<button id="petsave"><b>저장하기</b></button>
 		</form>
 	</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/js/pet.js"></script>
 </body>
 </html>

@@ -25,7 +25,7 @@
 				<li onclick="location='#'">
 					<span>내 프로필</span>
 				</li>
-				<li onclick="location.href='petProfile'">
+				<li onclick="location.href='petProfile/${pet.id}'">
 					<span>내새끼 프로필</span>
 				</li>
 			</ul>

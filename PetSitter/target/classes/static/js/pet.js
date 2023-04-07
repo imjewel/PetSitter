@@ -26,7 +26,7 @@ let index={
 	    formData.append("img", data.img);
 		$.ajax({ 
 			type:"POST",
-			url:"/api/pet",
+			url:"/api/pet/{id}",
 			data:JSON.stringify(data), 
 			contentType:"application/json; charset=utf-8",
 			dataType:"json" 
@@ -36,6 +36,37 @@ let index={
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		});
-  }
+  },
+  
+  	update: function(){
+ 		let data = {
+	      id: $("#id").val(),
+	      name: $("#name").val(),
+	      category: $("input[name='category']:checked").val(),
+	      gender: $("input[name='gender']:checked").val(),
+	      pet_type: $("#pet_type").val(),
+	      weight: $("#weight").val(),
+	      age: $("#age").val(),
+	      neutered: $("input[name='neutered']:checked").val(),
+	      hospital: $("#hospital").val(),
+	      vaccine: $("input[name='vaccine']:checked").val(),
+	      etc: $("#etc").val(),
+	      img: $("#files").prop("files")[0]
+		};
+		console.log(id);
+		console.log(data);
+		$.ajax({ 
+			type:"PUT",
+			url:"/api/pet/{id}"+id,
+			data:JSON.stringify(data), 
+			contentType:"application/json; charset=utf-8",
+			dataType:"json" 
+		}).done(function(resp){
+			alert("수정이 완료되었습니다.");
+			location.href=`/pet/${id}`;
+		}).fail(function(error){
+			alert(JSON.stringify(error));
+		});
+	},
 };
 index.init();
