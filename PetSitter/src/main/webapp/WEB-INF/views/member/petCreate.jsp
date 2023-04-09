@@ -21,7 +21,7 @@
 		<a href="javascript:history.back()" class="btn btn-primary"><</a>
 		<h1>반려동물 정보</h1>
 		</header>
-		<!-- <section id="photo"></section> -->
+		<section id="photo"></section>
 		<section id="pageList">
 			<ul>
 				<li>
@@ -50,6 +50,12 @@
 				  <input type="text" name="age" id="age">
 				</li>
 				<li>
+					<label for="size">크기</label>
+					<input type="radio" name="size" id="size" value="소형">소형
+					<input type="radio" name="size" id="size" value="중형">중형
+					<input type="radio" name="size" id="size" value="대형">대형
+				</li>
+				<li>
 					<label for="weight">몸무게</label>
 					<input type="text" name="weight" id="weight" placeholder="예) 2.8"></input>kg
 				</li>
@@ -65,27 +71,27 @@
 			</ul>
 		</section>
 			<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-				<input type="checkbox" class="btn-check" id="Rabies" autocomplete="off">
+				<input type="checkbox" class="btn-check" id="Rabies" name="vaccin" value="Rabies" autocomplete="off">
 				<label class="btn btn-outline-primary" for="Rabies">광견병</label>
 				
-				<input type="checkbox" class="btn-check" id="comprehensive" autocomplete="off">
+				<input type="checkbox" class="btn-check" id="comprehensive" name="vaccin" value="comprehensive" autocomplete="off">
 				<label class="btn btn-outline-primary" for="comprehensive">종합 백신</label>
 				
-				<input type="checkbox" class="btn-check" id="corona" autocomplete="off">
+				<input type="checkbox" class="btn-check" id="corona" name="vaccin" value="corona" autocomplete="off">
 				<label class="btn btn-outline-primary" for="corona">코로나 백신</label>
 				
-				<input type="checkbox" class="btn-check" id="kennel" autocomplete="off">
+				<input type="checkbox" class="btn-check" id="kennel" name="vaccin" value="kennel" autocomplete="off">
 				<label class="btn btn-outline-primary" for="kennel">켄넬코프</label>
 				
-				<input type="checkbox" class="btn-check" id="heartworm" autocomplete="off">
+				<input type="checkbox" class="btn-check" id="heartworm" name="vaccin" value="heartworm" autocomplete="off">
 				<label class="btn btn-outline-primary" for="heartworm">심장 사상충</label>
 				
-				<input type="checkbox" class="btn-check" id="ectoparasite" autocomplete="off">
+				<input type="checkbox" class="btn-check" id="ectoparasite" name="vaccin" value="ectoparasite" autocomplete="off">
 				<label class="btn btn-outline-primary" for="ectoparasite">외부 기생충</label>
 			</div>
-		<section id="etc">
+		<section>
 			<b style="padding-left:30px;">돌봄시 참고사항</b>	
-			<textarea rows="10" cols="100"></textarea>
+			<textarea id="etc" rows="10" cols="100"></textarea>
 		</section>
 		<button type="button" id="btn-petsave"><b>저장하기</b></button>
 		</form>

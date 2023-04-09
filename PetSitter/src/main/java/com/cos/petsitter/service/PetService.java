@@ -1,6 +1,8 @@
 package com.cos.petsitter.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,6 +20,11 @@ public class PetService {
 	public void create(Pet pet, Member member) {
 		pet.setMember(member);
 	   petRepository.save(pet);
+	}
+	
+	@Transactional(readOnly = true)
+	public Page<Pet> petList(Pageable pageable){
+		return petRepository.findAll(pageable);
 	}
 	
 	@Transactional(readOnly = true)
