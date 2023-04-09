@@ -71,7 +71,7 @@
 						<div class="card m-2">
 							<div class="card-body">
 								<h4 class="card-title">${board.title}</h4>
-								<a href="/auth/board/${board.id}" class="button btnFade btnOrange in-b">상세보기</a>
+								<a href="/auth/board/${board.id}" class="button btnOrange details">상세보기</a>
 							</div>
 						</div>
 					</c:forEach>
@@ -84,7 +84,7 @@
 							href="?page=${board.number-1}">Previous</a></li>
 					</c:when>
 					<c:otherwise>
-						<li class="page-item"><a class="page-link"
+						<li class="page-item left"><a class="page-link"
 							href="?page=${board.number-1}">Previous</a></li>
 					</c:otherwise>
 				</c:choose>

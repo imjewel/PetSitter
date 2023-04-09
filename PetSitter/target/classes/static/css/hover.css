@@ -9,9 +9,6 @@
 .container{
 	padding-left: 0;
 }
-footer p{
-	padding-bottom:80px;
-}
 
 .page-item{
 	display:inline-block;
@@ -21,4 +18,17 @@ footer p{
 }
 .page-link{
 	color:#000;
+}
+.card-body{
+	height:90px;
+	padding:0 0 0 15px;
+}
+.card-title{
+	line-height:90px;
+	display: inline-block;
+}
+.details{
+	padding:10px;
+	width:70px;
+	display:inline-block;
 }

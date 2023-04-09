@@ -61,7 +61,7 @@
 						<div class="card m-2">
 							<div class="card-body">
 								<h4 class="card-title">${board.title}</h4>
-								<a href="/auth/board/${board.id}" class="btn btn-primary">상세보기</a>
+								<a href="/auth/board/${board.id}" class="btn btn-primary details">상세보기</a>
 							</div>
 						</div>
 					</c:forEach>
@@ -75,7 +75,10 @@
 		  </div>
 		  <ul>
 			<li>
-				<div class="subject">공지사항 내용</div>
+				<div class="subject">서비스 점검 안내</div>
+			</li>
+			<li>
+				<div class="subject">My petsi 어플 출시!!</div>
 			</li>
 	      </ul>
 	 </article>

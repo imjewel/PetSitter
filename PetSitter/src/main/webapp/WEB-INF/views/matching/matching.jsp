@@ -21,14 +21,14 @@
 				<div class="msg"><a htef="#" ><img src="/img/msg.png"></a></div>
 			</li>
 			<li class="matching_user">
-				<img class="profile" src="/img/profile1.jpg">
-				<div class="id">펫시터 ID : 멈머</div>
+				<img class="profile" src="/img/profile2.jpg">
+				<div class="id">펫시터 ID : 나비</div>
 				<div class="location"><img src="/img/marker.png"> 지역 : 수원시 팔달구</div>
 				<div class="msg"><a htef="#" ><img src="/img/msg.png"></a></div>
 			</li>
 			<li class="matching_user">
-				<img class="profile" src="/img/profile1.jpg">
-				<div class="id">펫시터 ID : 멈머</div>
+				<img class="profile" src="/img/profile3.jpg">
+				<div class="id">펫시터 ID : 김골댕</div>
 				<div class="location"><img src="/img/marker.png"> 지역 : 수원시 팔달구</div>
 				<div class="msg"><a htef="#" ><img src="/img/msg.png"></a></div>
 			</li>
