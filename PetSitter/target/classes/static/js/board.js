@@ -21,7 +21,8 @@ let index={
 		//alert('user의 save함수 호출됨');
 		let data={
 			title: $("#title").val(),
-			content: $("#content").val()
+			content: $("#content").val(),
+			boardName: $("#boardName").val()
 		};
 		$.ajax({ 
 			type:"POST",
@@ -42,7 +43,8 @@ let index={
 		
 		let data={
 			title: $("#title").val(),
-			content: $("#content").val()
+			content: $("#content").val(),
+			boardName: $("#boardName").val()
 		};
 		console.log(id);
 		console.log(data);
@@ -128,7 +130,7 @@ let index={
 			dataType:"json" 
 		}).done(function(resp){
 			alert("댓글작성이 완료되었습니다.");
-			location.href=`/board/${boardId}`;
+			location.href=`/auth/board/${boardId}`;
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		});
@@ -141,7 +143,7 @@ let index={
 			dataType:"json" 
 		}).done(function(resp){
 			alert("댓글 삭제 성공");
-			location.href=`/board/${boardId}`;
+			location.href=`/auth/board/${boardId}`;
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		});
