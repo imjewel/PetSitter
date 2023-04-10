@@ -2,10 +2,11 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="../layout/header.jsp"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<div class="container">
-
+<head>
+	<link href="/css/Board.css" rel="stylesheet">
+</head>
+<article class="detail">
 	<button class="btn btn-secondary" onclick="history.back()">돌아가기</button>
-
 	<c:if test="${board.member.id==principal.member.id }">
 		<button id="btn-delete" class="btn btn-danger">삭제</button>
 		<a href="/board/${board.id}/updateForm" class="btn btn-warning">수정</a>
@@ -34,13 +35,10 @@
 		<form>
 			<input type="hidden" id="boardId" value="${board.id}"/>
 			<div class="card-body">
-				<textarea id="reply-content" class=" form-control" rows="1"></textarea>
-			</div>
-			<div class="card-footer">
+				<textarea id="reply-content" class="form-control" rows="1"></textarea>			
 				<button type="button" id="btn-reply-save" class="btn btn-primary">등록</button>
 			</div>
 		</form>
-		
 	</div>
 	<br />
 	<div class="card">	<!-- 댓글 리스트 -->
@@ -57,11 +55,9 @@
 				</div>
 			</li>
 			</c:forEach>
-			
 		</ul>
 	</div>
-</div>
-<br />
+</article>	
 <script type="text/javascript" src="/js/board.js"></script>
 <%@ include file="../layout/footer.jsp"%>
 

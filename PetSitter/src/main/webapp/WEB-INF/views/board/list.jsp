@@ -7,8 +7,10 @@
 </head>
     <main>
     	<div class="underline">
-	    	<h2><a href="" class="matching_borad">매칭게시판</a></h2>
-	     	<h2><a href="" class="integrated_borad">통합게시판</a></h2>
+	    	<ul class="division">
+    			<li class="matching_borad"><a href="" class="matching">매칭게시판</a></li>
+    			<li class="integrated_borad"><a href="" class="integrated">통합게시판</a></li>	
+    		</ul>
 	      	<div class="postcategory two">
 	        	<ul>
        				<li><a href="">구인게시판</a></li>
@@ -90,7 +92,7 @@
 								href="?page=${board.number-1}">Previous</a></li>
 						</c:when>
 						<c:otherwise>
-							<li class="page-item"><a class="page-link"
+							<li class="page-item left"><a class="page-link"
 								href="?page=${board.number-1}">Previous</a></li>
 						</c:otherwise>
 					</c:choose>

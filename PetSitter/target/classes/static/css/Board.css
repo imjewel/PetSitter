@@ -188,4 +188,34 @@ a.button {
 	border:none;
 	float:right;
 	margin: 10px 10px;
+	display : inline-block;
+}
+.division{
+	font-size:28px;
+}
+.matching_borad{
+	width: 228px;
+	text-align : center;
+}
+.matching{
+	margin-bottom : 30px;
+	display : inline-block;
+	
+}
+.integrated_borad{
+	width : 260px;
+	text-align : center;
+}
+.integrated{
+	display : inline-block;
+}
+
+.detail{
+	padding: 30px 10px 20px 10px;
+}
+.card-body{
+	display: inline-block;
+}
+#reply-content{
+	width:370px;
 }

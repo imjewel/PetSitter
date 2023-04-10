@@ -54,19 +54,19 @@ public class BoardController {
 		return "board/saveForm";
 	}
 	
-	//notice
-		@GetMapping({"/auth/notice"}) 
-		public String notice() { 
-			return "/notice_board";
-		}
-	//shopping
-		@GetMapping({"/auth/shopping"}) 
-		public String shopping() { 
-			return "shopping/shopping";
-		}
-	//shopping
-		@GetMapping({"/matching"}) 
-		public String matching() { 
-			return "matching/matching";
-		}
+	//쇼핑몰
+	@GetMapping({"/auth/shopping"}) 
+	public String shopping() { 
+		return "shopping/shopping";
+	}
+	//매칭
+	@GetMapping({"/matching"}) 
+	public String matching() { 
+		return "matching/matching";
+	}
+	//공지사항
+	@GetMapping({"/customer_service"}) 
+	public String customer_service() { 
+		return "service/customer_service";
+	}	
 }
