@@ -20,13 +20,13 @@ public class PetService {
 	   petRepository.save(pet);
 	}
 	
-//	@Transactional
-//	public void update(Pet updatePet, Member member) {
-//	    Pet pet = petRepository.findById(updatedPet.getId()).orElseThrow(() -> {
-//	        return new IllegalArgumentException("펫 찾기 실패: 아이디를 찾을 수 없습니다.");
-//	    });
-//	    pet.setName(updatedPet.getName());
-//	    pet.setCategory(updatedPet.getCategory());
-//	}
+	@Transactional
+	public void update(Pet pet, Member member) {
+	    Pet pets = petRepository.findById(pet.getId()).orElseThrow(() -> {
+	        return new IllegalArgumentException("펫 찾기 실패: 아이디를 찾을 수 없습니다.");
+	    });
+	    pets.setName(pet.getName());
+	    pets.setCategory(pet.getCategory());
+	}
 
 }

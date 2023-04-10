@@ -4,6 +4,13 @@ let index={
 			//화살표 함수사용 이유: this를 바인딩하기 위해 사용
 			this.save();
 		});
+        $("#btn-petupdate").on("click", (event) => {
+            this.update(event);
+        });
+		$("#btn-petdelete").on("click",()=>{
+			//화살표 함수사용 이유: this를 바인딩하기 위해 사용
+			this.deleteById();
+		});
 	},
 
   save: function() {
@@ -61,17 +68,32 @@ let index={
 	      etc: $("#etc").val()
 	      //img: $("#files").prop("files")[0]
 		};
-		console.log(id);
+		//console.log(id);
 		console.log(data);
 		$.ajax({ 
 			type:"PUT",
-			url:"/api/pet/{id}"+id,
+			url:"/api/petUpdate",
 			data:JSON.stringify(data), 
 			contentType:"application/json; charset=utf-8",
 			dataType:"json" 
 		}).done(function(resp){
 			alert("수정이 완료되었습니다.");
 			location.href=`/petProfile`;
+		}).fail(function(error){
+			alert(JSON.stringify(error));
+		});
+	},
+	
+		deleteById: function(){
+		let id=$("#id").text();
+		
+		$.ajax({ 
+			type:"DELETE",
+			url:"/api/pet/"+id,
+			dataType:"json" 
+		}).done(function(resp){
+			alert("삭제가 완료되었습니다.");
+			location.href="/myPage";
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		});

@@ -53,4 +53,21 @@ public class PetController {
 	    // Member 데이터가 없거나 Pet 데이터가 없으면 새로운 Pet 프로필 생성 페이지로 이동합니다.
 	    return "member/petCreate";
 	}
+	
+	@GetMapping("/petUpdate")
+	public String petUpdate(Model model, Principal principal) {
+		String username = principal.getName();
+		Optional<Member> memberOpt = memberRepository.findByUsername(username);
+	    if (memberOpt.isPresent()) {
+	        Member member = memberOpt.get();
+	        List<Pet> pets = member.getPets();
+	        
+	        if (!pets.isEmpty()) {
+	            Pet pet = pets.get(0);
+	            model.addAttribute("pet", pet);
+	            return "member/petUpdate";
+	        }
+	    }
+		return "member/petUpdate";
+	}
 }

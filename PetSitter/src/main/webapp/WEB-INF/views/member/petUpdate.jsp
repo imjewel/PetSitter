@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="/css/petCreate.css">
 
 <meta charset="UTF-8">
-<title>Pet Register</title>
+<title>Pet Update</title>
 </head>
 <body>
 	<div class="container" id="container">
@@ -29,7 +29,7 @@
 				</li>
 				<li>
 					<label for="name">이름</label>
-					<input type="text" name="name" id="name"></input>
+					<input type="text" name="name" id="name" value="${pet.name}"></input>
 				</li>
 				<li>
 					<label for="gender">성별</label>
@@ -93,7 +93,7 @@
 			<b style="padding-left:30px;">돌봄시 참고사항</b>	
 			<textarea id="etc" rows="10" cols="100"></textarea>
 		</section>
-		<button type="button" id="btn-petsave"><b>저장하기</b></button>
+		<button type="button" id="btn-petupdate"><b>저장하기</b></button>
 		</form>
 	</div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

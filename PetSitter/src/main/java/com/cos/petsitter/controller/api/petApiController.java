@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cos.petsitter.config.auth.PrincipalDetail;
 import com.cos.petsitter.dto.ResponseDto;
-import com.cos.petsitter.model.Board;
+import com.cos.petsitter.model.Member;
 import com.cos.petsitter.model.Pet;
 import com.cos.petsitter.service.PetService;
 
@@ -27,6 +27,10 @@ public class petApiController {
 		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
 	}
 	
-
+	@PutMapping("/api/petUpdate")
+	public ResponseDto<Integer> update(@PathVariable Pet pet,@AuthenticationPrincipal PrincipalDetail principal){
+		petService.update(pet, principal.getMember());
+		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
+	}
 	
 }
