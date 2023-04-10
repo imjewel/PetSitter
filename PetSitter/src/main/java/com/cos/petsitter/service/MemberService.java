@@ -38,8 +38,10 @@ public class MemberService {
 			return new IllegalArgumentException("회원 찾기 실패");
 		});
 		String rawPassword = member.getPassword();
-		String encPassword = encoder.encode(rawPassword);
-		persistance.setPassword(encPassword);
+	    if (rawPassword != null && !rawPassword.isEmpty()) { // 입력한 패스워드가 존재할 경우에만 암호화하여 저장
+	        String encPassword = encoder.encode(rawPassword);
+	        persistance.setPassword(encPassword);
+	    }
 		persistance.setNickname(member.getNickname());
 	}
 }
