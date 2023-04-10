@@ -4,24 +4,24 @@
 <head>
 <link rel="stylesheet" type="text/css" href="/css/myPage.css">
 </head>
+	<div class="center">
+		<div id="head_list">
+			<a href="javascript:history.back()" class="back"><</a>
+			<h1>마이 페이지</h1>
+		</div>	
+	</div>
 	<form>
-		<div class="center">
-			<div id="head_list">
-				<a href="javascript:history.back()" class="back"><</a>
-				<h1>마이 페이지</h1>
-			</div>	
+		<div class="profile">
+			<div class="profile_img">
+				<img src="/img/pet_img.jpg" class="my_img" onclick="location='#'">
+				<br><span>내 프로필</span>
+			</div>
+			<div class="profile_img" onclick="location.href='/petProfile'">
+				<img src="/img/pet_img.jpg" class="my_img">
+				<br><span>내새끼 프로필</span>
+			</div>
 		</div>
-		<article id="profile">
-			<ul>
-				<li onclick="location='#'">
-					<span>내 프로필</span>
-				</li>
-				<li onclick="location.href='/petProfile'">
-					<span>내새끼 프로필</span>
-				</li>
-			</ul>
-		</article>
-		<article id="myPageList">
+		<div id="myPageList">
 			<ul>
 				<li onclick="location.href='update'">
 					내 정보 수정
@@ -39,6 +39,6 @@
 					<span style="color: red;">회원탈퇴</span>
 				</li>
 			</ul>
-		</article>
+		</div>
 	</form>
 <%@ include file="../layout/footer.jsp" %>

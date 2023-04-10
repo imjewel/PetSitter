@@ -19,19 +19,27 @@ public class BoardController {
 	@Autowired
 	public BoardService boardService;
 	
-	//메인페이지 글목록
+	//글 목록 - 메인페이지
 	@GetMapping({"", "/", "/index"})
 	public String index(Model model,@PageableDefault(size = 5, sort = "id", 
 	direction = Sort.Direction.DESC) Pageable pageable) { 
 		model.addAttribute("board",boardService.글목록(pageable));
 		return "index";
 	}
-	//글 목록
+	//글 목록 - 구직 게시판
 	@GetMapping({"/auth/board/list"})
 	public String list(Model model,@PageableDefault(size = 5, sort = "id", 
 	direction = Sort.Direction.DESC) Pageable pageable) { 
 		model.addAttribute("board",boardService.글목록(pageable));
 		return "board/list";
+	}
+	
+	//글 목록 - 자유게시판
+	@GetMapping({"/auth/board/listFreeBoard"})
+	public String listFreeBoard(Model model,@PageableDefault(size = 5, sort = "id", 
+	direction = Sort.Direction.DESC) Pageable pageable) { 
+		model.addAttribute("board",boardService.글목록(pageable));
+		return "board/listFreeBoard";
 	}
 	
 	//글 수정하기
@@ -54,16 +62,26 @@ public class BoardController {
 		return "board/saveForm";
 	}
 	
+	
+	//USER권한이 필요
+	@GetMapping({"/board/saveFormFindPet"}) 
+	public String saveFormFindPet() { 
+		return "board/saveFormFindPet";
+	}
+	
+	
 	//쇼핑몰
 	@GetMapping({"/auth/shopping"}) 
 	public String shopping() { 
 		return "shopping/shopping";
 	}
+	
 	//매칭
 	@GetMapping({"/matching"}) 
 	public String matching() { 
 		return "matching/matching";
 	}
+	
 	//공지사항
 	@GetMapping({"/customer_service"}) 
 	public String customer_service() { 

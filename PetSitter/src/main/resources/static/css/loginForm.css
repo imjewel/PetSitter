@@ -46,8 +46,8 @@ a {
 
 button {
   border-radius: 20px;
-  border: 1px solid #FF4B2B;
-  background-color: #FF4B2B;
+  border: none;
+  background: #FFAA40;
   color: #FFFFFF;
   font-size: 12px;
   font-weight: bold;
@@ -56,6 +56,11 @@ button {
   text-transform: uppercase;
   transition: transform 80ms ease-in;
   margin-top: 20px;
+}
+button:hover {
+  background: #FF8E00;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 button:active {
