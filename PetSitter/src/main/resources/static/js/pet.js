@@ -7,6 +7,9 @@ let index={
 	},
 
   save: function() {
+    let vaccinValue = $("input[name='vaccin']:checked").map(function() {
+        return $(this).val();
+    }).get().join(','); // 배열 값을 문자열로 변환
 	    let data = {
 	      id: $("#id").val(),
 	      name: $("#name").val(),
@@ -17,8 +20,8 @@ let index={
   	      weight: $("#weight").val(),
 	      neutered: $("input[name='neutered']:checked").val(),
 	      hospital: $("#hospital").val(),
-	      vaccine: $("input[name='vaccine']:checked").val(),
-	      etc: $("#etc").val(),
+	      vaccin: vaccinValue,
+	      etc: $("#etc").val()
 	      //img: $("#files").prop("files")[0]
 	    };
 	    let formData = new FormData();

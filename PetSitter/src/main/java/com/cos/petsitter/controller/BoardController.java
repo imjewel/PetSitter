@@ -21,14 +21,14 @@ public class BoardController {
 	
 	//메인페이지 글목록
 	@GetMapping({"", "/", "/index"})
-	public String index(Model model,@PageableDefault(size = 3, sort = "id", 
+	public String index(Model model,@PageableDefault(size = 5, sort = "id", 
 	direction = Sort.Direction.DESC) Pageable pageable) { 
 		model.addAttribute("board",boardService.글목록(pageable));
 		return "index";
 	}
 	//글 목록
 	@GetMapping({"/auth/board/list"})
-	public String list(Model model,@PageableDefault(size = 3, sort = "id", 
+	public String list(Model model,@PageableDefault(size = 5, sort = "id", 
 	direction = Sort.Direction.DESC) Pageable pageable) { 
 		model.addAttribute("board",boardService.글목록(pageable));
 		return "board/list";
@@ -62,11 +62,11 @@ public class BoardController {
 	//shopping
 		@GetMapping({"/auth/shopping"}) 
 		public String shopping() { 
-			return "/shopping";
+			return "shopping/shopping";
 		}
 	//shopping
 		@GetMapping({"/matching"}) 
 		public String matching() { 
-			return "/matching";
+			return "matching/matching";
 		}
 }

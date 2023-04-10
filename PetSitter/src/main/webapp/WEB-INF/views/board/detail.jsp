@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="../layout/header.jsp"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <div class="container">
 
 	<button class="btn btn-secondary" onclick="history.back()">돌아가기</button>
@@ -13,6 +14,7 @@
 	<div>
 		글 번호 : <span id="id"><i>${board.id} </i></span> 
 		작성자 : <span><i>${board.member.username}</i></span>
+		작성일자 : <fmt:formatDate value="${board.createDate}" pattern="yyyy-MM-dd  hh:mm" />
 	</div>
 	<br />
 	<div>
@@ -49,7 +51,9 @@
 				<div>${reply.content}</div>
 				<div class="d-flex">
 					<div class="font-italic">작성자 : ${reply.member.username}&nbsp;</div>
-					<button onClick="index.replyDelete(${board.id},${reply.id})" class="badge">삭제</button>
+					<c:if test="${board.member.id==principal.member.id }">
+						<button onClick="index.replyDelete(${board.id},${reply.id})" class="badge btn-secondary">삭제</button>
+					</c:if>
 				</div>
 			</li>
 			</c:forEach>

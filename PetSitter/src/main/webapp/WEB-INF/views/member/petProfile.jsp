@@ -5,14 +5,13 @@
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="/css/petProfile.css">
-
 <meta charset="UTF-8">
-<title>Login Form</title>
+<title>My Page</title>
 </head>
 <body>
 	<div class="container" id="container">
 		<form>
-		<input type="hidden" id="boardId" value="${pet.id}"/>
+		<input type="hidden" id="petId" value="${pet.id}"/>
 		<header>
 		<!-- <div id="head_list"></div> -->
 		<a href="javascript:history.back()" class="btn btn-primary"><</a>
@@ -45,6 +44,12 @@
 				<li>
 				  <label for="age">나이</label>
 				  <input type="text" name="age" id="age">
+				</li>
+				<li>
+					<label for="size">크기</label>
+					<input type="radio" name="size" id="size" value="소형">소형
+					<input type="radio" name="size" id="size" value="중형">중형
+					<input type="radio" name="size" id="size" value="대형">대형
 				</li>
 				<li>
 					<label for="weight">몸무게</label>

@@ -17,6 +17,7 @@ let index = {
     save: function(event) {
         event.preventDefault();
         let data = {
+			id: $("#id").val(),
 			username: $("#username").val(),
             password: $("#password").val(),
             nickname: $("#nickname").val(),
@@ -37,7 +38,7 @@ let index = {
 				alert("회원가입에 실패하였습니다.");
 			} else{
 				alert("회원가입이 완료되었습니다.");
-            location.href = "/";				
+            location.href = "/auth/login";				
 			}
         }).fail(function(error) {
             alert(JSON.stringify(error));

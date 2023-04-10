@@ -11,7 +11,7 @@
 	     	<h2><a href="" class="integrated_borad">통합게시판</a></h2>
 	      	<div class="postcategory two">
 	        	<ul>
-	          		<li><a href="">구인게시판</a></li>
+       				<li><a href="">구인게시판</a></li>
 	          		<li><a href="">구직게시판</a></li>
 	        	</ul>
 	        </div>
@@ -53,7 +53,7 @@
 			  </div>
 			  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
 			    <span class="carousel-control-prev" aria-hidden="true">&lsaquo;</span>
-			    <span class="visually-hidden">Previous</span>
+			    <span class="visually-hidden">Prev</span>
 			  </button>
 			  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
 			    <span class="carousel-control-next" aria-hidden="true">&rsaquo;</span>
@@ -63,7 +63,7 @@
 		</article>
 		
 		<article id="board">
-			<h2 class="title">Find : Pet Sitter</h2>
+			<h4 class="title">글목록</h4>
 			<a href="/board/saveForm" title="Button fade orange" id="write" class="button btnFade btnOrange">글쓰기</a>
 			<ul class="width">
 				<li>
@@ -75,11 +75,12 @@
 					<c:forEach var="board" items="${board.content}">
 						<div class="card m-2">
 							<div class="card-body">
-								<h4 class="card-title">${board.title}</h4>
-								<a href="/auth/board/${board.id}" class="btn btn-primary">상세보기</a>
+								<h4 class="card-title"><a href="/auth/board/${board.id}">${board.title}</a></h4><br/>
+								<h6 class="card-title"><a href="/auth/board/${board.id}">${board.member.username}</a></h6>
 							</div>
 						</div>
 					</c:forEach>
+					
 				</li>
 		    	</ul>
 				<ul class="center">
