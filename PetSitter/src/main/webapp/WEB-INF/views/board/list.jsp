@@ -7,8 +7,10 @@
 </head>
     <main>
     	<div class="underline">
-	    	<h2><a href="" class="matching_borad">매칭게시판</a></h2>
-	     	<h2><a href="" class="integrated_borad">통합게시판</a></h2>
+    	<ul class="division">
+    		<li class="matching_borad"><a href="" class="matching">매칭게시판</a></li>
+    		<li class="integrated_borad"><a href="" class="integrated">통합게시판</a></li>	
+    	</ul>
 	      	<div class="postcategory two">
 	        	<ul>
        				<li><a href="">구인게시판</a></li>

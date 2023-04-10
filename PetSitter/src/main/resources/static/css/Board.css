@@ -143,12 +143,6 @@ a.button {
  	width:520px;
  }
  
-.underline h2{
-  text-align: center;
-  padding: 30px 0 20px;
-  float: left;
-  margin-left:88px;
-}
 .postcategory{
   width: 520px;
   display: inline-block;
@@ -188,4 +182,24 @@ a.button {
 	border:none;
 	float:right;
 	margin: 10px 10px;
+}
+.division{
+	font-size:28px;
+}
+.matching_borad{
+	width:228px;
+	text-align: center;
+}
+.matching{
+	margin-bottom:30px;
+	display:inline-block;
+	
+}
+.integrated_borad{
+	width:260px;
+	text-align: center;
+}
+.integrated{
+	display:inline-block;
+	
 }
