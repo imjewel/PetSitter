@@ -12,13 +12,14 @@
 		<a href="/board/${board.id}/updateForm" class="btn btn-warning">수정</a>
 	</c:if>
 	<br /> <br />
-	<div>
-		작성자 : <span><i>${board.member.username}</i></span>
-		작성일자 : <fmt:formatDate value="${board.createDate}" pattern="yyyy-MM-dd  hh:mm" />
-	</div>
+
 	<br />
 	<div>
 		<h3>${board.title}</h3>
+		<p>
+			작성자 : <span><i>${board.member.username}</i></span><br>
+			작성일자 : <fmt:formatDate value="${board.createDate}" pattern="yyyy-MM-dd  hh:mm" />
+		</p>
 	</div>
 	<hr />
 	<div>
