@@ -68,11 +68,6 @@
 			<a href="/board/saveForm" title="Button fade orange" id="write" class="button btnFade btnOrange">글쓰기</a>
 			<ul class="width">
 				<li>
-					<!-- <div class="subject">펫시터를 찾아요</div>
-					<div class="writer">펫시터 아이디</div>
-					<div class="clear"></div>
-					<div class="date">2023.03.03</div> -->
-					
 					<c:forEach var="board" items="${board.content}">
 						<div class="card m-2">
 							<div class="card-body">
@@ -81,32 +76,30 @@
 							</div>
 						</div>
 					</c:forEach>
-					
 				</li>
-		    	</ul>
-				<ul class="center">
-					<c:choose>
-						<c:when test="${board.first}">
-							<li class="page-item disabled left"><a class="page-link"
-								href="?page=${board.number-1}">Previous</a></li>
-						</c:when>
-						<c:otherwise>
-							<li class="page-item left"><a class="page-link"
-								href="?page=${board.number-1}">Previous</a></li>
-						</c:otherwise>
-					</c:choose>
-					
-					<c:choose>
-						<c:when test="${board.last}">
-							<li class="page-item disabled"><a class="page-link"
-								href="?page=${board.number+1}">Next</a></li>
-						</c:when>
-						<c:otherwise>
-							<li class="page-item"><a class="page-link"
-								href="?page=${board.number+1}">Next</a></li>
-						</c:otherwise>
-					</c:choose>
-				</ul>
+		    </ul>
+			<ul class="center">
+				<c:choose>
+					<c:when test="${board.first}">
+						<li class="page-item disabled left"><a class="page-link"
+							href="?page=${board.number-1}">Previous</a></li>
+					</c:when>
+					<c:otherwise>
+						<li class="page-item left"><a class="page-link"
+							href="?page=${board.number-1}">Previous</a></li>
+					</c:otherwise>
+				</c:choose>
+				<c:choose>
+					<c:when test="${board.last}">
+						<li class="page-item disabled"><a class="page-link"
+							href="?page=${board.number+1}">Next</a></li>
+					</c:when>
+					<c:otherwise>
+						<li class="page-item"><a class="page-link"
+							href="?page=${board.number+1}">Next</a></li>
+					</c:otherwise>
+				</c:choose>
+			 </ul>
 		  </article>
       </main>
       <%@ include file="../layout/footer.jsp" %>

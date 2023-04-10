@@ -57,10 +57,14 @@
 		</div>
 		<ul class="width">
 			<li>
-				<div class="subject">펫시터를 찾아요</div>
-				<div class="writer">펫시터 아이디</div>
-				<div class="clear"></div>
-				<div class="date">2023.03.03</div>
+				<c:forEach var="board" items="${board.content}">
+					<div class="card m-2">
+						<div class="card-body">
+							<h4 class="card-title"><a href="/auth/board/${board.id}">${board.title}</a></h4><br/>
+							<h6 class="card-title"><a href="/auth/board/${board.id}">${board.member.username}</a></h6>
+						</div>
+					</div>
+				</c:forEach>
 			</li>
 	    </ul>
 	  </article>

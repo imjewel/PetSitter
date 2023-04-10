@@ -3,7 +3,7 @@
 <%@ include file="../layout/header.jsp" %>
 <head>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Board.css">
-	<link href="/css/matching.css" rel="stylesheet">
+<link href="/css/matching.css" rel="stylesheet">
 </head>
     <main>
        <article>
@@ -32,7 +32,29 @@
 				<div class="location"><img src="/img/marker.png"> 지역 : 수원시 팔달구</div>
 				<div class="msg"><a htef="#" ><img src="/img/msg.png"></a></div>
 			</li>
-	    </ul>		
+	    </ul>
+	    <ul class="center">
+				<c:choose>
+					<c:when test="${board.first}">
+						<li class="page-item disabled left"><a class="page-link"
+							href="?page=${board.number-1}">Previous</a></li>
+					</c:when>
+					<c:otherwise>
+						<li class="page-item left"><a class="page-link"
+							href="?page=${board.number-1}">Previous</a></li>
+					</c:otherwise>
+				</c:choose>
+				<c:choose>
+					<c:when test="${board.last}">
+						<li class="page-item disabled"><a class="page-link"
+							href="?page=${board.number+1}">Next</a></li>
+					</c:when>
+					<c:otherwise>
+						<li class="page-item"><a class="page-link"
+							href="?page=${board.number+1}">Next</a></li>
+					</c:otherwise>
+				</c:choose>
+			 </ul>		
 	  </article>
     </main>
 <%@ include file="../layout/footer.jsp" %>
