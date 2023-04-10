@@ -2,6 +2,7 @@ package com.cos.petsitter.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,9 +24,9 @@ import lombok.NoArgsConstructor;
 public class Pet {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="PET_SEQ_GENERATOR")
-	private long id;
+	private int id;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "memberId")
     private Member member;
 

@@ -1,8 +1,10 @@
 package com.cos.petsitter.repository;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import com.cos.petsitter.model.Member;
 
@@ -11,6 +13,9 @@ import com.cos.petsitter.model.Member;
 //@Repository 생략 가능
 public interface MemberRepository extends JpaRepository<Member,Integer>{
 	Optional<Member> findByUsername(String username);
+	
+	@Query("select distinct m from Member m join fetch m.pet")
+    List<Member> findAllJoinFetch();
 }
 
 

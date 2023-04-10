@@ -17,7 +17,7 @@
       <form action="/auth/loginProc" method="post">
 
 	      <input type="text" id="username" name="username" placeholder="ID" />
-	      <input type="password" id="username" name="password" placeholder="Password" />
+	      <input type="password" name="password" placeholder="Password" />
 	      <a href="#">비밀번호를 잊어버리셨나요?</a>
 	      
 	    <div id="social_login1">
@@ -36,6 +36,6 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="/js/member.js"></script>
-<%@ include file="../layout/footer.jsp" %>
 </body>
 </html>
+<%@ include file="../layout/footer.jsp" %>

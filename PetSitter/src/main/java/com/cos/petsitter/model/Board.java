@@ -19,7 +19,7 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+//import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
@@ -48,13 +48,15 @@ public class Board {
 	//대용량 데이터
 	private String content;
 	
+	private String boardName;
+	
 	private int count; //조회수
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	//Many=Board, User = One 한명이 여러개의 게시글을 쓸 수 있다.
 	@JoinColumn(name="memberId")
-	private Member member; //자바는 오브젝트를 저장할 수 있지만 DB는 오브젝트를 저장할 수 없기에 
-	                     //외래키를 사용한다.
+	private Member member; //자바는 오브젝트를 저장할 수 있지만 DB는 오브젝트를 저장할 수 없기에 외래키를 사용한다.
+	                     
 	@OneToMany (mappedBy="board", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)//REMOVE는 게시글을 지울 때 댓글도 지운다는 의미. 오류날 경우 리무브 임포트 다시해보기
 	//mappedBy는 연관관계의 주인이 아니라, DB에 컬럼을 만들지 않는다는 의미
 	//하나의 게시글에는 여러개 댓글 작성
@@ -63,6 +65,11 @@ public class Board {
 	private List<Reply> reply;
 	
 	@CreationTimestamp 
-	@JsonFormat(shape= JsonFormat.Shape.STRING, pattern="yyyy-MM-dd")
+	//@JsonFormat(shape= JsonFormat.Shape.STRING, pattern="YYYY-MM-DD")
 	private Timestamp createDate;
+	
+//	@ManyToOne(fetch = FetchType.EAGER)
+//	//Many=Board, User = One 한명이 여러개의 게시글을 쓸 수 있다.
+//	@JoinColumn(name="petId")
+//	private Pet pet;
 }

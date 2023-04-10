@@ -12,10 +12,6 @@
 	<div class="container" id="container">
 		<form>
 		<header>
-		  	<div class="header">
-		      <a href="index"><img id="logo" src="/img/logo1.png"></a>
-		      <input type="image" id="search-Btn" src="/img/search.png">
-		  	</div>
 			<div id="head_list"></div>
 			<a href="javascript:history.back()" class="btn btn-primary"><</a>
 			<h1>마이 페이지</h1>
@@ -25,7 +21,7 @@
 				<li onclick="location='#'">
 					<span>내 프로필</span>
 				</li>
-				<li onclick="location.href='petProfile'">
+				<li onclick="location.href='/petProfile'">
 					<span>내새끼 프로필</span>
 				</li>
 			</ul>

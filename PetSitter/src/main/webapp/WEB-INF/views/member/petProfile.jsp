@@ -5,19 +5,15 @@
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="/css/petProfile.css">
-
 <meta charset="UTF-8">
-<title>Login Form</title>
+<title>My Page</title>
 </head>
 <body>
 	<div class="container" id="container">
 		<form>
+		<input type="hidden" id="petId" value="${pet.id}"/>
 		<header>
-		  <div class="header">
-		      <a href="index"><img id="logo" src="/img/logo1.png"></a>
-		      <input type="image" id="search-Btn" src="/img/search.png">
-		  </div>
-		<div id="head_list"></div>
+		<!-- <div id="head_list"></div> -->
 		<a href="javascript:history.back()" class="btn btn-primary"><</a>
 		<h1>반려동물 정보</h1>
 		</header>
@@ -29,33 +25,44 @@
 				</li>
 				<li>
 					<label for="name">이름</label>
-					<input type="text" name="name" placeholder="예) 댕댕이"></input>
+					<input type="text" name="name" id="name" value="${pet.name}"></input>
 				</li>
 				<li>
 					<label for="gender">성별</label>
-					<input type="radio" name="gender" value="남자아이">남자아이
-					<input type="radio" name="gender" value="야자아이">여자아이
+					<input type="radio" name="gender" id="gender" value="남자아이">남자아이
+					<input type="radio" name="gender" id="gender" value="여자아이">여자아이
 				</li>
 				<li>
-					<label for="dog_type">견종</label>
-					<input type="text" name="dog_type" placeholder="예) 말티즈"></input>
+					<label for="category">카테고리</label>
+					<input type="radio" name="category" id="category" value="강아지">강아지
+					<input type="radio" name="category" id="category" value="고양이">고양이
 				</li>
 				<li>
-				  <label for="birth">생일</label>
-				  <input type="date" name="birth">
+					<label for="pet_type">견종</label>
+					<input type="text" name="pet_type" id="pet_type" placeholder="예) 말티즈"></input>
 				</li>
 				<li>
-					<label for="kg">몸무게</label>
-					<input type="text" name="kg" placeholder="예) 2.8"></input>kg
+				  <label for="age">나이</label>
+				  <input type="text" name="age" id="age">
+				</li>
+				<li>
+					<label for="size">크기</label>
+					<input type="radio" name="size" id="size" value="소형">소형
+					<input type="radio" name="size" id="size" value="중형">중형
+					<input type="radio" name="size" id="size" value="대형">대형
+				</li>
+				<li>
+					<label for="weight">몸무게</label>
+					<input type="text" name="weight" id="weight" placeholder="예) 2.8"></input>kg
 				</li>
 				<li>
 					<label for="neutered">중성화</label>
-					<input type="radio" name="neutered" value="yes">했어요
-					<input type="radio" name="neutered" value="no">안했어요
+					<input type="radio" name="neutered" id="neutered" value="yes">했어요
+					<input type="radio" name="neutered" id="neutered" value="no">안했어요
 				</li>
 				<li>
 					<label for="hospital">동물병원</label>
-					<input type="text" name="hospital" placeholder="예) SL동물병원 (하왕십리동)"></input>
+					<input type="text" name="hospital" id="hospital" placeholder="예) SL동물병원 (하왕십리동)"></input>
 				</li>
 			</ul>
 		</section>
@@ -82,34 +89,10 @@
 			<b style="padding-left:30px;">돌봄시 참고사항</b>	
 			<textarea rows="10" cols="100"></textarea>
 		</section>
-		<section id="bottom_logo">
-		    <div>
-		      <ul>
-		      	<li onclick="location.href='/index'">
-		      		<img src="/img/home1.png"><br>
-		      		홈
-		      	</li>
-		      	<li>
-		      		<img src="/img/app_board1.png"><br>
-		      		게시판
-		      	</li>
-		      	<li>
-		      		<img src="/img/people1.png"><br>
-		      		매칭
-		      	</li>
-		      	<li>
-		      		<img src="/img/shop1.png"><br>
-		      		쇼핑몰
-		      	</li>
-		      	<li onclick="location.href='/myPage'">
-		      		<img src="/img/profile1.png"><br>
-		      		마이페이지
-		      	</li>
-		      </ul>
-	    	</div>
-    	</section>
-			<button id="save"><b>저장하기</b></button>
+		<button type="button" id="btn-petsave"><b>저장하기</b></button>
 		</form>
 	</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/js/pet.js"></script>
 </body>
 </html>

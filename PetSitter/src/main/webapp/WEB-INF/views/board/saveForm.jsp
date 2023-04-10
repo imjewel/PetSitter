@@ -48,6 +48,18 @@
 		</div>
 		
 		<div class="form-group">
+			<label for="boardName">Board Name</label>
+			<select class="form-control" id=""boardName"">
+				<option value="findPet">Find : Pet</option>
+				<option value="findSitter">Find : Sitter</option>
+				<option value="freeBoard">자유게시판</option>
+				<option value="infoBoard">정보게시판</option>
+				<option value="friendBoard">친목게시판</option>
+				<option value="picBoard">내아이자랑</option>
+			</select>
+		</div>
+		
+		<div class="form-group">
 			<label for="content">Content:</label>
 			<textarea class="form-control summernote" rows="5" id="content"></textarea>
 		</div>
