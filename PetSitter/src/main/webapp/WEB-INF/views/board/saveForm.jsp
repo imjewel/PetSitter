@@ -11,7 +11,7 @@
 		</div>
 		<div class="form-group">
 			<label for="boardName">Board Name</label>
-			<select class="form-control" id=""boardName"">
+			<select class="form-control" id="boardName">
 				<option value="findPet">Find : Pet</option>
 				<option value="findSitter">Find : Sitter</option>
 				<option value="freeBoard">자유게시판</option>

@@ -29,10 +29,14 @@ public class BoardService {
 		boardRepository.save(board);
 	}
 
-
 	@Transactional(readOnly = true)
 	public Page<Board> 글목록(Pageable pageable){
 		return boardRepository.findAll(pageable);
+	}
+	
+	@Transactional(readOnly = true)
+	public Page<Board> 자유게시판글목록(Pageable pageable1){
+		return boardRepository.findAll(pageable1);
 	}
 
 	@Transactional(readOnly = true)
