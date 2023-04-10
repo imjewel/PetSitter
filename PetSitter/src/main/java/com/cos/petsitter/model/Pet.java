@@ -44,6 +44,9 @@ public class Pet {
 	
 	@Column(nullable = false, length = 10)
 	private String age;
+
+	@Column(nullable = false, length = 10)
+	private String pet_size;
 	
 	@Column(nullable = false, length = 10)
 	private String weight;

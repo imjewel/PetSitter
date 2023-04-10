@@ -1,8 +1,6 @@
 package com.cos.petsitter.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,26 +20,13 @@ public class PetService {
 	   petRepository.save(pet);
 	}
 	
-	@Transactional(readOnly = true)
-	public Page<Pet> petList(Pageable pageable){
-		return petRepository.findAll(pageable);
-	}
-	
-	@Transactional(readOnly = true)
-	public Pet petInfo(int id) {
-		return petRepository.findById(id).orElseThrow(() -> {
-			return new IllegalArgumentException("글 상세보기 실패: 아이디를 찾을 수 없습니다.");
-		});
-	}
-	
 //	@Transactional
-//	public void update(int id, Pet requestPet) {
-//		Pet pet = petRepository.findById(id).orElseThrow(() -> {
-//			return new IllegalArgumentException("글 찾기 실패: 아이디를 찾을 수 없습니다.");
-//		}); // 영속화 완료
-//		pet.setName(requestPet.getName());
-//		// 해당 함수로 종료(Service 종료)시 트랜젝션이 종료된다.
-//		// 영속화 되어있는 board의 데이터가 달라졌기 때문에 
-//		// 이때 더티체킹이 일어나면서 - 자동 업데이트가 된다.(commit = db flush)
+//	public void update(Pet updatePet, Member member) {
+//	    Pet pet = petRepository.findById(updatedPet.getId()).orElseThrow(() -> {
+//	        return new IllegalArgumentException("펫 찾기 실패: 아이디를 찾을 수 없습니다.");
+//	    });
+//	    pet.setName(updatedPet.getName());
+//	    pet.setCategory(updatedPet.getCategory());
 //	}
+
 }

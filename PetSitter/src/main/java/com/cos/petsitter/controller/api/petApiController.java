@@ -27,12 +27,6 @@ public class petApiController {
 		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
 	}
 	
-//	@PutMapping("/api/pet/{id}")
-//	public ResponseDto<Integer> update(@PathVariable int id,@RequestBody Pet pet){
-//		System.out.println("BoardApiController:update id"+id);
-//		System.out.println("BoardApiController:update title"+pet.getName());
-//		petService.update(id,pet);
-//		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
-//	}
+
 	
 }

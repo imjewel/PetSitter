@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="/css/petCreate.css">
 
 <meta charset="UTF-8">
-<title>Login Form</title>
+<title>Pet Register</title>
 </head>
 <body>
 	<div class="container" id="container">
@@ -19,7 +19,7 @@
 		  </div>
 		<div id="head_list"></div>
 		<a href="javascript:history.back()" class="btn btn-primary"><</a>
-		<h1>반려동물 정보</h1>
+		<h1>반려동물 등록하기</h1>
 		</header>
 		<section id="photo"></section>
 		<section id="pageList">
@@ -50,10 +50,10 @@
 				  <input type="text" name="age" id="age">
 				</li>
 				<li>
-					<label for="size">크기</label>
-					<input type="radio" name="size" id="size" value="소형">소형
-					<input type="radio" name="size" id="size" value="중형">중형
-					<input type="radio" name="size" id="size" value="대형">대형
+					<label for="pet_size">크기</label>
+					<input type="radio" name="pet_size" id="pet_size" value="소형">소형
+					<input type="radio" name="pet_size" id="pet_size" value="중형">중형
+					<input type="radio" name="pet_size" id="pet_size" value="대형">대형
 				</li>
 				<li>
 					<label for="weight">몸무게</label>
@@ -61,8 +61,8 @@
 				</li>
 				<li>
 					<label for="neutered">중성화</label>
-					<input type="radio" name="neutered" id="neutered" value="yes">했어요
-					<input type="radio" name="neutered" id="neutered" value="no">안했어요
+					<input type="radio" name="neutered" id="neutered" value="했어요">했어요
+					<input type="radio" name="neutered" id="neutered" value="안했어요">안했어요
 				</li>
 				<li>
 					<label for="hospital">동물병원</label>
@@ -71,22 +71,22 @@
 			</ul>
 		</section>
 			<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-				<input type="checkbox" class="btn-check" id="Rabies" name="vaccin" value="Rabies" autocomplete="off">
+				<input type="checkbox" class="btn-check" id="Rabies" name="vaccin" value="광견병" autocomplete="off">
 				<label class="btn btn-outline-primary" for="Rabies">광견병</label>
 				
-				<input type="checkbox" class="btn-check" id="comprehensive" name="vaccin" value="comprehensive" autocomplete="off">
+				<input type="checkbox" class="btn-check" id="comprehensive" name="vaccin" value="종합 백신" autocomplete="off">
 				<label class="btn btn-outline-primary" for="comprehensive">종합 백신</label>
 				
-				<input type="checkbox" class="btn-check" id="corona" name="vaccin" value="corona" autocomplete="off">
+				<input type="checkbox" class="btn-check" id="corona" name="vaccin" value="코로나 백신" autocomplete="off">
 				<label class="btn btn-outline-primary" for="corona">코로나 백신</label>
 				
-				<input type="checkbox" class="btn-check" id="kennel" name="vaccin" value="kennel" autocomplete="off">
+				<input type="checkbox" class="btn-check" id="kennel" name="vaccin" value="켄넬코프" autocomplete="off">
 				<label class="btn btn-outline-primary" for="kennel">켄넬코프</label>
 				
-				<input type="checkbox" class="btn-check" id="heartworm" name="vaccin" value="heartworm" autocomplete="off">
+				<input type="checkbox" class="btn-check" id="heartworm" name="vaccin" value="심장 사상충" autocomplete="off">
 				<label class="btn btn-outline-primary" for="heartworm">심장 사상충</label>
 				
-				<input type="checkbox" class="btn-check" id="ectoparasite" name="vaccin" value="ectoparasite" autocomplete="off">
+				<input type="checkbox" class="btn-check" id="ectoparasite" name="vaccin" value="외부 기생충" autocomplete="off">
 				<label class="btn btn-outline-primary" for="ectoparasite">외부 기생충</label>
 			</div>
 		<section>
