@@ -34,9 +34,10 @@ public class Member {
 		//프로젝트에 연결된 DB의 넘버링 전략을 사용
 		private int id;//시퀀스
 	
+
 		@OneToMany(mappedBy = "member", fetch = FetchType.LAZY)
 		private List<Pet> pets = new ArrayList<>();
-		
+	
 		/**
 		//백기선 강사 JPA N+1 문제 양방향 매핑 방법
 		public void add(Pet pet) {

@@ -68,8 +68,22 @@ public class Board {
 	//@JsonFormat(shape= JsonFormat.Shape.STRING, pattern="YYYY-MM-DD")
 	private Timestamp createDate;
 	
-//	@ManyToOne(fetch = FetchType.EAGER)
-//	//Many=Board, User = One 한명이 여러개의 게시글을 쓸 수 있다.
-//	@JoinColumn(name="petId")
-//	private Pet pet;
+	//주소 찾기 시작
+	@Column(nullable = true, length = 50)
+	private String postcode;
+	@Column(nullable = true, length = 50)
+	private String road;
+	@Column(nullable = true, length = 50)
+	private String jibun;
+	@Column(nullable = true, length = 50)
+	private String detail;
+	@Column(nullable = true, length = 50)
+	private String extra;
+	//주소 찾기 끝
+	
+	@Column(nullable = true, length = 10)
+	private String category;
+
+	@Column(nullable = true, length = 10)
+	private String pet_size;
 }

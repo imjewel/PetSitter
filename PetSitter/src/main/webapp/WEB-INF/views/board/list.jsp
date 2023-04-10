@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>	
 <%@ include file="../layout/header.jsp" %>
 <head>
   <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Board.css">
@@ -7,25 +8,26 @@
 </head>
     <main>
     	<div class="underline">
-	    	<ul class="division">
-    			<li class="matching_borad"><a href="" class="matching">매칭게시판</a></li>
-    			<li class="integrated_borad"><a href="" class="integrated">통합게시판</a></li>	
-    		</ul>
+	    	<h2><a href="" class="matching_borad">매칭게시판</a></h2>
+	     	<h2><a href="" class="integrated_borad">통합게시판</a></h2>
+	     	
 	      	<div class="postcategory two">
 	        	<ul>
-       				<li><a href="">구인게시판</a></li>
+       				<li><a href="/auth/board/list">구인게시판</a></li>
 	          		<li><a href="">구직게시판</a></li>
 	        	</ul>
 	        </div>
+	  
 	        <div class="postcategory four">
 		        <ul>
-		          <li><a href="">자유게시판</a></li>
+		          <li><a href="/auth/board/listFreeBoard">자유게시판</a></li>
 		          <li><a href="">정보게시판</a></li>
 		          <li><a href="">친목게시판</a></li>
 		          <li><a href="">내아이자랑</a></li>
 		        </ul>
 		    </div>
 		  </div>
+		
 		<article id="matching_result">
 			<h3 class="title"><a href="/matching">new 매칭!👨‍👦‍👦</a></h3>
 			<a href="/matching" class="more">&raquo;</a>
@@ -63,19 +65,25 @@
 			  </button>
 			</div>
 		</article>
+
 		<article id="board">
 			<h4 class="title">글목록</h4>
-			<a href="/board/saveForm" title="Button fade orange" id="write" class="button btnFade btnOrange">글쓰기</a>
+			<a href="/board/saveFormFindPet" title="Button fade orange" id="write" class="button btnFade btnOrange">글쓰기</a>
 			<ul class="width">
 				<li>
-					<c:forEach var="board" items="${board.content}">
-						<div class="card m-2">
-							<div class="card-body">
-								<h4 class="card-title"><a href="/auth/board/${board.id}">${board.title}</a></h4><br/>
-								<h6 class="card-title"><a href="/auth/board/${board.id}">${board.member.username}</a></h6>
-							</div>
+										
+				<c:forEach var="board" items="${board.content}">
+					<input type="hidden" id="boardName" value="findPet"/>
+					<!--<c:if test="${board.boardName == 'findPet'}">-->
+					<div class="card m-2">
+						<div class="card-body">
+							<h4 class="card-title"><a href="/auth/board/${board.id}">${board.title}</a></h4><br/>
+							<h6 class="card-title"><a href="/auth/board/${board.id}">${board.member.username}</a></h6>
 						</div>
+					</div>
+					<!--</c:if>-->
 					</c:forEach>
+				
 				</li>
 		    </ul>
 			<ul class="center">
@@ -100,6 +108,7 @@
 					</c:otherwise>
 				</c:choose>
 			 </ul>
+
 		  </article>
       </main>
       <%@ include file="../layout/footer.jsp" %>
