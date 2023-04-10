@@ -36,26 +36,21 @@ public class PetController {
 	
 	@GetMapping("/petProfile")
 	public String petProfile(Model model, Principal principal) {
-	// 로그인한 사용자 정보를 가져옵니다.
-	String username = principal.getName();
-	Optional<Member> memberOpt = memberRepository.findByUsername(username);
-		// Member와 연관된 Pet 데이터를 함께 조회합니다.
-		if(memberOpt.isPresent()) {
-		Member member = memberOpt.get();
-		List<Pet> pets = member.getPets();
-		if (!pets.isEmpty()) {
-		Pet pet = pets.get(0);
-		model.addAttribute("pet", pet);
-		return "petProfile";
-		}
-	}
-	// Pet 데이터가 없으면 새로운 Pet 프로필 생성 페이지로 이동합니다.
-	return "member/petCreate";
-	}
-	
-	//USER권한이 필요
-	@GetMapping("/petCreate") 
-	public String saveForm() { 
-		return "redirect:/member/petCreate";
+	    // 로그인한 사용자 정보를 가져옵니다.
+	    String username = principal.getName();
+	    Optional<Member> memberOpt = memberRepository.findByUsername(username);
+
+	    if (memberOpt.isPresent()) {
+	        Member member = memberOpt.get();
+	        List<Pet> pets = member.getPets();
+
+	        if (!pets.isEmpty()) {
+	            Pet pet = pets.get(0);
+	            model.addAttribute("pet", pet);
+	            return "member/petProfile";
+	        }
+	    }
+	    // Member 데이터가 없거나 Pet 데이터가 없으면 새로운 Pet 프로필 생성 페이지로 이동합니다.
+	    return "member/petCreate";
 	}
 }

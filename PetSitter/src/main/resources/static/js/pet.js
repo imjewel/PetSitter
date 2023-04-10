@@ -17,6 +17,7 @@ let index={
 	      category: $("input[name='category']:checked").val(),
 	      pet_type: $("#pet_type").val(),
 	      age: $("#age").val(),
+	      pet_size: $("input[name='pet_size']:checked").val(),
   	      weight: $("#weight").val(),
 	      neutered: $("input[name='neutered']:checked").val(),
 	      hospital: $("#hospital").val(),
@@ -42,19 +43,23 @@ let index={
   },
   
   	update: function(){
+      let vaccinValue = $("input[name='vaccin']:checked").map(function() {
+        return $(this).val();
+    }).get().join(','); // 배열 값을 문자열로 변환
  		let data = {
 	      id: $("#id").val(),
 	      name: $("#name").val(),
-	      category: $("input[name='category']:checked").val(),
 	      gender: $("input[name='gender']:checked").val(),
+	      category: $("input[name='category']:checked").val(),
 	      pet_type: $("#pet_type").val(),
-	      weight: $("#weight").val(),
 	      age: $("#age").val(),
+	      pet_size: $("input[name='pet_size']:checked").val(),
+  	      weight: $("#weight").val(),
 	      neutered: $("input[name='neutered']:checked").val(),
 	      hospital: $("#hospital").val(),
-	      vaccine: $("input[name='vaccine']:checked").val(),
-	      etc: $("#etc").val(),
-	      img: $("#files").prop("files")[0]
+	      vaccin: vaccinValue,
+	      etc: $("#etc").val()
+	      //img: $("#files").prop("files")[0]
 		};
 		console.log(id);
 		console.log(data);
@@ -66,7 +71,7 @@ let index={
 			dataType:"json" 
 		}).done(function(resp){
 			alert("수정이 완료되었습니다.");
-			location.href=`/pet/${id}`;
+			location.href=`/petProfile`;
 		}).fail(function(error){
 			alert(JSON.stringify(error));
 		});
