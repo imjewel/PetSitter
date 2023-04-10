@@ -17,7 +17,7 @@ public class MemberService {
 
 	@Autowired
 	private BCryptPasswordEncoder encoder;
-
+	
 	@Transactional
 	public int create (Member member) {
 		String rawPassword = member.getPassword(); // 입력하는 패스워드

@@ -55,9 +55,19 @@ public class Member {
 		@Column(nullable = false)
 		private String birth;
 	
+		//주소 찾기 시작
 		@Column(nullable = false, length = 50)
-		private String address;
-	
+		private String postcode;
+		@Column(nullable = false, length = 50)
+		private String road;
+		@Column(nullable = false, length = 50)
+		private String jibun;
+		@Column(nullable = false, length = 50)
+		private String detail;
+		@Column(nullable = false, length = 50)
+		private String extra;
+		//주소 찾기 끝
+		
 		@Column(nullable = false, length = 10)
 		private String gender;
 	
