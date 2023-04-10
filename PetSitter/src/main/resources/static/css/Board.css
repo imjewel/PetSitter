@@ -186,9 +186,9 @@ a.button {
 .btn-primary{
 	background: #FF8E00;
 	border:none;
-	float:right;
-	margin: 10px 10px;
 	display : inline-block;
+	margin-bottom:30px;
+	margin-left:7px;
 }
 .division{
 	font-size:28px;
@@ -209,13 +209,7 @@ a.button {
 .integrated{
 	display : inline-block;
 }
-
-.detail{
-	padding: 30px 10px 20px 10px;
-}
-.card-body{
-	display: inline-block;
-}
-#reply-content{
-	width:370px;
+#btn-save{
+	float:right;
+	margin:10px 10px;
 }

@@ -3,7 +3,7 @@
 <%@ include file="../layout/header.jsp"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <head>
-	<link href="/css/Board.css" rel="stylesheet">
+	<link href="/css/board/detail.css" rel="stylesheet">
 </head>
 <article class="detail">
 	<button class="btn btn-secondary" onclick="history.back()">돌아가기</button>
@@ -13,7 +13,6 @@
 	</c:if>
 	<br /> <br />
 	<div>
-		글 번호 : <span id="id"><i>${board.id} </i></span> 
 		작성자 : <span><i>${board.member.username}</i></span>
 		작성일자 : <fmt:formatDate value="${board.createDate}" pattern="yyyy-MM-dd  hh:mm" />
 	</div>
@@ -49,7 +48,7 @@
 				<div>${reply.content}</div>
 				<div class="d-flex">
 					<div class="font-italic">작성자 : ${reply.member.username}&nbsp;</div>
-					<c:if test="${board.member.id==principal.member.id }">
+					<c:if test="${reply.member.id==principal.member.id }">
 						<button onClick="index.replyDelete(${board.id},${reply.id})" class="badge btn-secondary">삭제</button>
 					</c:if>
 				</div>

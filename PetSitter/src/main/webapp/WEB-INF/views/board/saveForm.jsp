@@ -9,7 +9,6 @@
 			<label for="title">Title</label>
 			<input type="text" class="form-control" placeholder="Enter title" id="title">
 		</div>
-		
 		<div class="form-group">
 			<label for="boardName">Board Name</label>
 			<select class="form-control" id=""boardName"">

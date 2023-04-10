@@ -63,7 +63,6 @@
 			  </button>
 			</div>
 		</article>
-		
 		<article id="board">
 			<h4 class="title">글목록</h4>
 			<a href="/board/saveForm" title="Button fade orange" id="write" class="button btnFade btnOrange">글쓰기</a>
