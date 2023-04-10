@@ -69,7 +69,7 @@
 			${pet.etc}
 		</section>
 		<button type="button" onclick="location.href='petUpdate'"><b>수정하러 가기</b></button>
-		<button type="button" onclick="location.href='petUpdate'"><b>삭제하기</b></button>
+		<button type="button" ><b>삭제하기</b></button>
 		</form>
 	</div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
