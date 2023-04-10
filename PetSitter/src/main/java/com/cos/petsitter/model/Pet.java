@@ -26,7 +26,7 @@ public class Pet {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="PET_SEQ_GENERATOR")
 	private int id;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "memberId")
     private Member member;
 

@@ -11,7 +11,6 @@
 <body>
 	<div class="container" id="container">
 		<form>
-		<input type="hidden" id="petId" value="${pet.id}"/>
 		<header>
 		<!-- <div id="head_list"></div> -->
 		<a href="javascript:history.back()" class="btn btn-primary"><</a>
