@@ -14,7 +14,7 @@ import com.cos.petsitter.model.Member;
 public interface MemberRepository extends JpaRepository<Member,Integer>{
 	Optional<Member> findByUsername(String username);
 	
-	@Query("select distinct m from Member m join fetch m.pet")
+	@Query("select distinct m from Member m join fetch m.pets")
     List<Member> findAllJoinFetch();
 }
 

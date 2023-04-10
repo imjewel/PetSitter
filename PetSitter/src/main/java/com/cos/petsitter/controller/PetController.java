@@ -1,12 +1,17 @@
 package com.cos.petsitter.controller;
 
+import java.security.Principal;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
+import com.cos.petsitter.model.Member;
 import com.cos.petsitter.model.Pet;
+import com.cos.petsitter.repository.MemberRepository;
 import com.cos.petsitter.repository.PetRepository;
 import com.cos.petsitter.service.PetService;
 
@@ -15,6 +20,9 @@ public class PetController {
 	
 	@Autowired
 	public PetService petService;
+	
+	@Autowired
+	public MemberRepository memberRepository;
 	
 	@Autowired
 	public PetRepository petRepository;
@@ -26,15 +34,23 @@ public class PetController {
 //		return "board/updateForm";
 //	}
 	
-	@GetMapping("/petProfile/{id}")
-	public String getPetById(@PathVariable int id, Model model) {
-	    Pet pet = petRepository.findById(id).orElse(null); // Pet Data 조회
-	    model.addAttribute("pet", pet);
-	    return "member/petProfile";
-	}
-	//USER권한이 필요
-	@GetMapping("/petCreate") 
-	public String saveForm() { 
-		return "member/petCreate";
+	@GetMapping("/petProfile")
+	public String petProfile(Model model, Principal principal) {
+	    // 로그인한 사용자 정보를 가져옵니다.
+	    String username = principal.getName();
+	    Optional<Member> memberOpt = memberRepository.findByUsername(username);
+
+	    if (memberOpt.isPresent()) {
+	        Member member = memberOpt.get();
+	        List<Pet> pets = member.getPets();
+
+	        if (!pets.isEmpty()) {
+	            Pet pet = pets.get(0);
+	            model.addAttribute("pet", pet);
+	            return "member/petProfile";
+	        }
+	    }
+	    // Member 데이터가 없거나 Pet 데이터가 없으면 새로운 Pet 프로필 생성 페이지로 이동합니다.
+	    return "member/petCreate";
 	}
 }
