@@ -183,6 +183,7 @@ a.button {
 	float:right;
 	margin: 10px 10px;
 }
+
 .division{
 	font-size:28px;
 }
@@ -193,7 +194,6 @@ a.button {
 .matching{
 	margin-bottom:30px;
 	display:inline-block;
-	
 }
 .integrated_borad{
 	width:260px;
@@ -201,5 +201,4 @@ a.button {
 }
 .integrated{
 	display:inline-block;
-	
 }
