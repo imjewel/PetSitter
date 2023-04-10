@@ -13,11 +13,11 @@
 	<form>
 		<div class="profile">
 			<div class="profile_img">
-				<img src="/img/profile1.png" class="my_img" onclick="location='#'">
+				<img src="/img/pet_img.jpg" class="my_img" onclick="location='#'">
 				<br><span>내 프로필</span>
 			</div>
 			<div class="profile_img" onclick="location.href='/petProfile'">
-				<img src="/img/profile2.png" class="my_img">
+				<img src="/img/pet_img.jpg" class="my_img">
 				<br><span>내새끼 프로필</span>
 			</div>
 		</div>
