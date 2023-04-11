@@ -14,23 +14,32 @@
       <article id="board">
 		<h3 class="list_title">나의 매칭된 회원목록 🐶</h3>
 		<ul>
+		<!-- 
 			<li class="matching_user">
 				<img class="profile" src="/img/profile1.jpg">
 				<div class="id">펫시터 ID : 멈머</div>
 				<div class="location"><img src="/img/marker.png"> 지역 : 수원시 팔달구</div>
-				<div class="msg"><a htef="#" ><img src="/img/msg.png"></a></div>
+				<div class="msg"><a href="#" ><img src="/img/msg.png"></a></div>
 			</li>
 			<li class="matching_user">
 				<img class="profile" src="/img/profile1.jpg">
 				<div class="id">펫시터 ID : 멈머</div>
 				<div class="location"><img src="/img/marker.png"> 지역 : 수원시 팔달구</div>
-				<div class="msg"><a htef="#" ><img src="/img/msg.png"></a></div>
+				<div class="msg"><a href="#" ><img src="/img/msg.png"></a></div>
 			</li>
+			 -->
 			<li class="matching_user">
-				<img class="profile" src="/img/profile1.jpg">
-				<div class="id">펫시터 ID : 멈머</div>
-				<div class="location"><img src="/img/marker.png"> 지역 : 수원시 팔달구</div>
-				<div class="msg"><a htef="#" ><img src="/img/msg.png"></a></div>
+				
+				<c:if test="${board.extra == principal.member.extra}">
+				    <c:if test="${board.pet_size == principal.pet.pet_size}">
+				        <c:if test="${board.category == principal.pet.category}">
+				        	<img class="profile" src="/img/profile1.jpg">
+				            <div class="id">펫시터 ID : ${board.member.username}</div>
+				            <div class="location"><img src="/img/marker.png"> 지역 : ${board.member.extra}</div>
+				            <div class="msg"><a href="#" ><img src="/img/msg.png"></a></div>
+				        </c:if>
+				    </c:if>
+				</c:if>
 			</li>
 	    </ul>		
 	  </article>

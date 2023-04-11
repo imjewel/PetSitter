@@ -18,6 +18,13 @@
 	</div>
 	<br />
 	<div>
+		주소(우편번호) : ${board.postcode} <br>
+		주소 : ${board.extra}<br>
+		펫 사이즈 : ${board.pet_size}<br>
+		견종 : ${board.category} <br>
+	</div>
+	<br /><br />
+	<div>
 		<h3>${board.title}</h3>
 	</div>
 	<hr />
