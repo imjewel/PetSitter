@@ -6,6 +6,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -42,6 +43,12 @@ public class MemberApiController {
     	SecurityContextHolder.getContext().setAuthentication(authentication);
     	
     	return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
+    }
+    	
+    @DeleteMapping("/member/delete/{id}")
+    public ResponseDto<Integer> deleteById(@RequestBody Member member) {
+        memberService.delete(member);
+        return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
     }
 }
 

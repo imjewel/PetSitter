@@ -24,6 +24,11 @@ public class MemberController {
 	public String update() {
 		return "member/updateForm";
 	}
+	
+	@GetMapping("/delete")
+	public String delte() {
+		return "member/deleteForm";
+	}
 
 	@GetMapping("/myPage")
 	public String myPage() {

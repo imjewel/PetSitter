@@ -1,6 +1,7 @@
 package com.cos.petsitter.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -43,6 +44,18 @@ public class MemberService {
 	        persistance.setPassword(encPassword);
 	    }
 		persistance.setNickname(member.getNickname());
+	}
+	
+	@Transactional
+	public void delete(Member member) {
+	    Member delete = memberRepository.findById(member.getId())
+	            .orElseThrow(() -> new IllegalArgumentException("해당 회원이 존재하지 않습니다."));
+
+	    if (encoder.matches(member.getPassword(), delete.getPassword())) {
+	        memberRepository.deleteById(member.getId());
+	    } else {
+	        throw new IllegalArgumentException("패스워드가 일치하지 않습니다.");
+	    }
 	}
 }
 

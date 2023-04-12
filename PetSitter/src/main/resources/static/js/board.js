@@ -76,6 +76,7 @@ let index={
 			this.replySave();
 		});
 	},
+	
 	save: function(){
 		//alert('user의 save함수 호출됨');
 		let data={
@@ -96,7 +97,6 @@ let index={
 			alert(JSON.stringify(error));
 		});
 	},
-	
 	
 	matchingsave: function(){
 		//alert('user의 save함수 호출됨');

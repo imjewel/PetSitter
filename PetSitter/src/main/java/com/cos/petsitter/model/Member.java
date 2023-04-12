@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -35,7 +36,7 @@ public class Member {
 		private int id;//시퀀스
 	
 
-		@OneToMany(mappedBy = "member", fetch = FetchType.LAZY)
+		@OneToMany(mappedBy = "member", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 		private List<Pet> pets = new ArrayList<>();
 	
 		/**

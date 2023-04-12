@@ -61,7 +61,10 @@ let index = {
         $("#btn-update").on("click", (event) => {
             this.update(event);
         });
-        
+		$("#btn-delete").on("click",()=>{
+		//화살표 함수사용 이유: this를 바인딩하기 위해 사용
+		this.deleteById();
+		});
         /**
         $("#btn-login").on("click", (event) => {
     		this.login(event);
@@ -118,7 +121,6 @@ let index = {
             url: "/member",
             data: JSON.stringify(data),
             contentType: "application/json; charset=utf-8",
-            //application/json 뒤에는 ; 붙이면 안되고 charset=utf-8 쓰면 안됨
             dataType: "json"
         }).done(function(resp) {
             alert("회원정보 수정이 완료되었습니다.");
@@ -127,6 +129,36 @@ let index = {
             alert(JSON.stringify(error));
         });
     },
+    
+    	deleteById: function(){
+		 let id=$("#id").val();
+            let username=$("#username").val();
+            let password=$("#password").val();
+            if (username == "" || password == "") {
+                alert("빈 칸을 모두 채워주세요.");
+                return false;
+            }
+            if (!confirm("정말 삭제하시겠습니까?")) {
+                return false;
+            }
+		
+		$.ajax({ 
+			type:"DELETE",
+			url:"/member/delete/" + id,
+			dataType:"json",
+			data: JSON.stringify({
+				username: username,
+				password: password
+			}),
+			contentType: "application/json; charset=utf-8"
+		}).done(function(resp){
+			alert("삭제가 완료되었습니다.");
+			location.href="/";
+		}).fail(function(error){
+			alert(JSON.stringify(error));
+		});
+	},
+		
     /**
     login: function(event) {
         event.preventDefault();

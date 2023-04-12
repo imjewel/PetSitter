@@ -35,7 +35,7 @@
 				<li onclick="location='#'">
 					로그아웃
 				</li>
-				<li onclick="location='#'">
+				<li onclick="location='delete'">
 					<span style="color: red;">회원탈퇴</span>
 				</li>
 			</ul>

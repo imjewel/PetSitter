@@ -29,17 +29,22 @@ let index={
 	      neutered: $("input[name='neutered']:checked").val(),
 	      hospital: $("#hospital").val(),
 	      vaccin: vaccinValue,
-	      etc: $("#etc").val()
-	      //img: $("#files").prop("files")[0]
+	      etc: $("#etc").val(),
+	      photoFile: $("#photo_input").prop("files")[0]
 	    };
 	    let formData = new FormData();
 	    formData.append("data", JSON.stringify(data));
-	    formData.append("img", data.img);
+	    formData.append("img", data.photoFile);
 		$.ajax({ 
 			type:"POST",
 			url:"/api/pet",
+			/*
 			data:JSON.stringify(data), 
 			contentType:"application/json; charset=utf-8",
+			*/
+			data:formData,
+			contentType:false,
+			processData:false,
 			dataType:"json" 
 		}).done(function(resp){
 			alert("펫정보 등록이 완료되었습니다.");
