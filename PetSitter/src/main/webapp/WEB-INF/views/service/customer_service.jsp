@@ -60,12 +60,17 @@
 	      		<a href="" class="write">1:1문의 작성하러가기 <span class="gray"> 답변하기까지 다소 시간이 걸릴 수 있습니다.</span></a>
 	      	</div>
 	      	<div class="accordion-body">
-	      		1:1문의 제목1<br>
-	      		1:1문의 내용
+	      		<span class="bold">펫정보에 추가로 반려동물을 등록하고싶어요.</span><br><br>
+	      		키우는 강아지가 3마리여서 모두 등록을 하고싶습니다.<br>
+	      		펫은 한마리만 등록가능한가요?<br><br>
+	      		My Petsi의 답변<br>
+	      		현재는 펫을 한마리만 등록가능합니다.<br>
+	      		추후에 여러마리의 펫을 등록 가능하게 수정할예정입니다.<hr>
 	      	</div>
 	      	<div class="accordion-body">
-	      		1:1문의 제목2<br>
-	      		1:1문의 내용
+	      		<span class="bold">게시물을 삭제하고 싶어요.</span><br><br>
+	      		My Petsi의 답변<br>
+	      		게시물 상세에 들어가서 게시물 삭제 가능합니다.<hr>
 	      	</div>
 	      </div>
 	    </div>

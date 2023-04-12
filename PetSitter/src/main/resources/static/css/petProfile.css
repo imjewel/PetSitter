@@ -25,7 +25,7 @@
 	line-height:100px;
 }
 b {
-	font-size: 20px;
+	font-size: 18px;
 }
 
 #head_list {
@@ -54,7 +54,8 @@ b {
 
 #pageList ul li label {
 	display: inline-block;
-	width: 150px;
+	width: 100px;
+	font-weight: bold;
 }
 
 input {

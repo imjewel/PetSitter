@@ -59,7 +59,7 @@
 					${pet.vaccin}
 				</li>
 				<li>
-					<label><b>돌봄시 참고사항</b></label>
+					<label><b>참고사항</b></label>
 					${pet.etc}
 				</li>
 			</ul>
