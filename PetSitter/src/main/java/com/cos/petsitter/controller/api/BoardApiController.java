@@ -30,7 +30,7 @@ public class BoardApiController {
 	@DeleteMapping("/api/board/{id}")
 	public ResponseDto<Integer> deleteById(@PathVariable int id){
 		boardService.글삭제하기(id);
-		return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
+		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1); 
 	}
 	
 	@PutMapping("/api/board/{id}")

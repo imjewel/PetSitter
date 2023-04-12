@@ -21,13 +21,8 @@
 				<div class="location"><img src="/img/marker.png"> 지역 : 수원시 팔달구</div>
 				<div class="msg"><a href="#" ><img src="/img/msg.png"></a></div>
 			</li>
-			<li class="matching_user">
-				<img class="profile" src="/img/profile1.jpg">
-				<div class="id">펫시터 ID : 멈머</div>
-				<div class="location"><img src="/img/marker.png"> 지역 : 수원시 팔달구</div>
-				<div class="msg"><a href="#" ><img src="/img/msg.png"></a></div>
-			</li>
 			 -->
+			 <!-- 
 			<li class="matching_user">
 				
 				<c:if test="${board.extra == principal.member.extra}">
@@ -41,6 +36,20 @@
 				    </c:if>
 				</c:if>
 			</li>
+			 -->
+			 
+		  <c:choose>
+      		<c:when test="${principal.member.postcode eq board.postcode}">
+		        <li class="matching_user">
+		         <img class="profile" src="/img/${board.profile_image}">
+		          <div class="id">펫시터 ID : ${board.member.username}</div>
+		          <div class="location"><img src="/img/marker.png"> 지역 : ${board.jibun}</div>
+		          <div class="msg"><a href="#" ><img src="/img/msg.png"></a></div>
+		        </li>	
+      		</c:when>
+		</c:choose>
+			 
+			 
 	    </ul>		
 	  </article>
     </main>
