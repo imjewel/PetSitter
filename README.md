@@ -74,11 +74,28 @@ ETC<br>
 # 게시글 작성
 <img src="https://user-images.githubusercontent.com/123542824/233545932-9b25fe2a-8c6c-4b69-badd-2fed931e4143.png"/>
 
+- 카테고리를 매칭 카테고리로 변경 후 글을 작성하면 매칭 리스트에 게시글 표시 가능
+
+- 게시글 작성, 수정, 삭제 가능
+
+
 # 매칭 게시판
 <img src="https://user-images.githubusercontent.com/123542824/233546125-d102ee24-f0ae-432d-9356-aa0994b1543f.png"/><br>
 - 게시판에 등록된 펫시터 구인 글의 매칭 조건이
 
   내 거주지역과 일치할 시 매칭 리스트에 게시글 표시
+
+
+# 쇼핑몰 추천
+<img src="https://user-images.githubusercontent.com/123542824/233556058-093de461-bf18-4e8a-9d60-79bf0e460314.png"/><br>
+- 반려동물 용품 판매 사이트를 ifram으로 띄워 미리보기 가능
+
+- 바로가기를 클릭하면 해당 사이트로 이동 가능
+
+
+# 고객센터
+<img src="https://user-images.githubusercontent.com/123542824/233556577-1a74a227-fb0a-48e4-bb0d-e3bd144e3ec5.png"/>
+
 
 
 
