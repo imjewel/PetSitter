@@ -28,5 +28,61 @@
 - 애견용품 판매 사이트의 정보를 간단히 보여주고 링크를 클릭하면 해당 판매 사이트로 이동 가능
 
 
+
+# 사용된 기술 스택
+Back-End<br>
+<img src="https://img.shields.io/badge/JAVA-007396?style=for-the-badge&logo=java&logoColor=white">
+<img src="https://img.shields.io/badge/Spring boot-6DB33F?style=for-the-badge&logo=Springboot&logoColor=white">
+<img src="https://img.shields.io/badge/Spring security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white">
+<img src="https://img.shields.io/badge/JPA-6DB33F?style=for-the-badge&logo=jpa&logoColor=white">
+<img src="https://img.shields.io/badge/JSP-000000?style=for-the-badge&logo=jsp&logoColor=white">
+<img src="https://img.shields.io/badge/apachemaven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white">
+
+Front-End<br>
+<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+<img src="https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white">
+<img src="https://img.shields.io/badge/Ajax-1572B6?style=for-the-badge&logo=Ajax&logoColor=white">
+<img src="https://img.shields.io/badge/jquery-0769AD?style=for-the-badge&logo=jquery&logoColor=white">
+
+DB<br>
+<img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white">
+<img src="https://img.shields.io/badge/sql developer-25A162?style=for-the-badge&logo=sqldeveloper&logoColor=white">
+
+ETC<br>
+<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
+<img src="https://img.shields.io/badge/eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white">
+<img src="https://img.shields.io/badge/visualstudiocode-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white">
+<img src="https://img.shields.io/badge/apachetomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=white">
+
 ---
-<img width="20%" src="https://user-images.githubusercontent.com/123542824/232989010-24de3651-5f1b-4ee7-beb9-dfa1f8d2510b.png"/>
+
+
+# 메인 페이지
+<img src="https://user-images.githubusercontent.com/123542824/233543339-994ec92a-2084-44ad-a910-e85381435468.png"/>
+
+# 회원 관리
+<img src="https://user-images.githubusercontent.com/123542824/233543589-f3f87d41-2efb-47e8-bc95-23deac39d927.png"/>
+
+# 반려동물 등록하기
+<img src="https://user-images.githubusercontent.com/123542824/233544728-afe8aa27-a3f5-4c13-a046-b0ee5a4dfea4.png"/>
+
+### Join Fetch로 JPA N+1 문제 해결<br>
+- 로그인 한 회원의 반려동물 데이터가 없다면 내새끼 프로필 클릭시 반려동물 등록 페이지로<br>
+  로그인 한 회원의 반려동물 데이터가 있다면 내새끼 프로필 클릭시 반려동물 정보 페이지로 이동
+
+# 게시글 작성
+<img src="https://user-images.githubusercontent.com/123542824/233545932-9b25fe2a-8c6c-4b69-badd-2fed931e4143.png"/>
+
+# 매칭 게시판
+<img src="https://user-images.githubusercontent.com/123542824/233546125-d102ee24-f0ae-432d-9356-aa0994b1543f.png"/><br>
+- 게시판에 등록된 펫시터 구인 글의 매칭 조건이
+
+  내 거주지역과 일치할 시 매칭 리스트에 게시글 표시
+
+
+
+
+
+
+
